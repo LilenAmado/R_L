@@ -6,10 +6,12 @@
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
     text-decoration: none;
+    scroll-behavior: smooth;
 }
 
 body{
     background: #8843F2;
+    background: whitesmoke;
 }
 
 /* Buscador */
@@ -40,6 +42,7 @@ body{
     list-style: none;
     font-weight: 600;
     color: #ffffff;
+    color: black;
     /*text-align: center;*/
     margin-left: 20px;
     width: 20vw;
@@ -56,9 +59,12 @@ li{
 .resaltarColor{
     background: chartreuse;
 }
-
+.resaltarVerde{
+    background: #bee969;
+}
 #contenedor_buscador a{
     color: white;
+    color: black;
 }
 #contenedor_buscador li:hover{
     background: chartreuse;
@@ -67,7 +73,7 @@ li{
 /* Fin buscador */
 
 .resumenes{
-    width: 80%;
+    width: 90%;
 }
 .grid{
     display: grid;
@@ -78,19 +84,55 @@ h1{
     font-size: 30px;
     margin-top: 20px;
     color: white;
+    color: black;
     text-align: center;
+    border: 1px solid #bee969;
 }
 
 h2{
     color: white;
+    color: black;
 }
 
 footer>a{
     color:white;
+    color: black;
     font: bold;
     position: fixed !important;
     z-index: 999999;
     right: 70px;
     bottom: 20px;
     width: 100px;
+}
+
+.green{
+    color: green
+}
+
+.arrow{
+    width: 30px;
+    text-align: center;
+    padding: 2px;
+}
+
+img{
+    width: 100%;
+}
+
+@media (max-width: 599px){
+    .grid{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .resumenes{
+        margin-left: 5%;
+    }
+    #listaArticulos {
+        width: 87.5vw;
+    }
+    #buscador {
+        width: 87.5vw;
+    }
+    .arrow {
+        right: 15px;
+    }
 }

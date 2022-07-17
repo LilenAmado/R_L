@@ -24,37 +24,112 @@
                 <li class="articulo"><a href="">&nbsp;&nbsp;&nbsp;➜ Python</a></li>
                 <li class="articulo"><a href="">&nbsp;&nbsp;&nbsp;➜ Javascript</a></li>
                 <li class="articulo"><a href="">&nbsp;&nbsp;&nbsp;➜ REACT</a></li>
+                <li class="articulo"><a href="#GIT">&nbsp;&nbsp;&nbsp;➜ GIT</a></li>
             </ul>
         </div>
     </section>
     <section class="resumenes">
         <article class="">
-            <h1>Resumenes</h1>
+            <h1>Resumenes</h1><br>
         </article>
-        <article class="" id="teoria">
-            <h2>Teoría</h2>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsum maxime modi vitae excepturi tenetur harum dolorum iste assumenda magni, temporibus labore! Dolor obcaecati ad sunt molestiae porro cumque doloremque quibusdam.</p>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsum maxime modi vitae excepturi tenetur harum dolorum iste assumenda magni, temporibus labore! Dolor obcaecati ad sunt molestiae porro cumque doloremque quibusdam.</p>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsum maxime modi vitae excepturi tenetur harum dolorum iste assumenda magni, temporibus labore! Dolor obcaecati ad sunt molestiae porro cumque doloremque quibusdam.</p>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsum maxime modi vitae excepturi tenetur harum dolorum iste assumenda magni, temporibus labore! Dolor obcaecati ad sunt molestiae porro cumque doloremque quibusdam.</p>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsum maxime modi vitae excepturi tenetur harum dolorum iste assumenda magni, temporibus labore! Dolor obcaecati ad sunt molestiae porro cumque doloremque quibusdam.</p>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsum maxime modi vitae excepturi tenetur harum dolorum iste assumenda magni, temporibus labore! Dolor obcaecati ad sunt molestiae porro cumque doloremque quibusdam.</p>
-        </article>
-        <article class="" id="PowerAutomate">
-            <h2>Power Automate</h2>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsum maxime modi vitae excepturi tenetur harum dolorum iste assumenda magni, temporibus labore! Dolor obcaecati ad sunt molestiae porro cumque doloremque quibusdam.</p>
-        </article>
+        
         <article class="" id="PowerBI">
-            <h2>Power BI</h2>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsum maxime modi vitae excepturi tenetur harum dolorum iste assumenda magni, temporibus labore! Dolor obcaecati ad sunt molestiae porro cumque doloremque quibusdam.</p>
+            <h2 class="resaltarVerde">Power BI</h2> <br>
+            <p>
+                <strong>Llave primaria (PK): </strong>
+                Es el identificador de columna de la tabla en nos encontramos. Es un valor único que hace una distinción entre cada fila de la tabla especificada. No puede repetirse en la misma tabla. 
+                <br><br>
+                <strong>Llave foránea (FK): </strong>
+                Es una llave primaria (PK) que pertenece a otra tabla, pero que la usamos para relacionar las tablas. Utilizamos las claves principales como externas en nuestra tabla de hechos. Estás pueden repetirse.
+                <br><br>
+                En las <strong>tablas dim</strong> la información no se repite, es única. <br>
+                En las <strong>tablas de hecho</strong> si puede repetirse el número de cliente por ejemplo (FK) pero no el número de factura (PK)
+            </p><br>
+            <img src="img/PowerBI/PowerBI_1.jpg" alt=""><br><br>
+            <p>
+                <strong>- Power Query:</strong>
+                <br><br>
+                <strong>Pivot y Unpivot:</strong>
+                Es una llave primaria (PK) que pertenece a otra tabla, pero que la usamos para relacionar las tablas. Utilizamos las claves principales como externas en nuestra tabla de hechos. Estás pueden repetirse.
+                <br>
+            </p><br>
+            <img src="img/PowerBI/PowerBI_2.jpg" alt="">
+            <img src="img/PowerBI/PowerBI_3.jpg" alt="">
+            <img src="img/PowerBI/PowerBI_4.jpg" alt="">
+            <br><br>
+            <p>
+                <strong>Trim:</strong><br><br>
+                <img src="img/PowerBI/PowerBI_5.jpg" alt="">
+
+                <br><br>
+                 
+                <strong>Dax:</strong><br>
+                <a href="https://docs.microsoft.com/en-us/dax/">https://docs.microsoft.com/en-us/dax/</a><br>
+                <a href="https://www.daxformatter.com/">https://www.daxformatter.com/</a><br>
+                <br><br>
+                <strong> CALCULATE():</strong> Filtrar  <a href="https://www.youtube.com/watch?v=6lcZ5J-2NRQ">https://www.youtube.com/watch?v=6lcZ5J-2NRQ</a> <br>
+                CALCULATE(Expresión, [Filtro 1], …)
+            </p>
+            <p class="green"> 
+                CALCULATE([Ventas]) >> Trae lo mismo que la columna original.
+                CALCULATE([Ventas], Producto[Marca] = “Conexión TI”) >> Filtra por marca.
+            </p>
         </article>
-        <article class="" id="SSIS">
-            <h2>SSIS</h2>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsum maxime modi vitae excepturi tenetur harum dolorum iste assumenda magni, temporibus labore! Dolor obcaecati ad sunt molestiae porro cumque doloremque quibusdam.</p>
+
+        <br>
+
+        <article class="" id="GIT">
+            <h2 class="resaltarVerde">GIT</h2>
+            <br>
+            <p>
+                GIT init: Se usa para iniciar un repositorio en una carpeta.
+                <br><br>
+                GIT add . : Se usa para confirmar que vamos a guardar todos los elementos de la carpeta en el repositorio.
+                <br><br>
+                GIT add . nombrearchivo: Esto es útil en caso de que quisiramos almacenar en el repositorio solo un archivo especifico.
+                <br><br>
+                GIT commit -m "Comentario o descripcion del commit a realizar": Se usa para confirmar el almacenamiento en el repositorio.
+                <br><br>
+                GIT log --oneline: Se usa para saber el historial de todos nuestros commits.
+                <br><br>
+                GIT status -s : Se  utiliza para saber el status de todos nuestros archivos en el repositorio, si no muestra nada es porque ya fueron guardados todos en el repositorio (Comiteados).
+                <br><br>
+                GIT reset --hard (Código de Commit): Se usa para volver a un commit en particular.
+                <br><br>
+                GIT branch: Se usa para conocer todas las ramas disponibles en el repositorio.
+                <br><br>
+                GIT branch (Nombre de la rama que deseamos crear): Se usa para crear nuevas ramas.
+                <br><br>
+                GIT checkout (Nombre de la rama a la que queremos pasar): Se usa para intercambiar de una rama a otra. 
+                <br><br>
+                GIT branch -d rama2 <- (nombre de la rama a borrar): Este comando se usa para borrar ramas.
+                <br><br>
+                GIT tag (Nombre del Tag) -m "Comentario": Se usa para crear un Tag. 
+                <br><br>
+                GIT push --tags: Se usa para confirmar el archivo final subido en Github, si accedemos a ese Tag podremos descargar un comprimido con todos los archivos.
+                <br><br>
+                
+                <strong>PASOS PARA CLONAR UN REPO, MODIFICARLO Y LUEGO SUBIRLO DE NUEVO AL REPOSITORIO DE GITHUB</strong>
+                <br><br>
+                1)GIT clone (link del repo): Se usa para clonar un repo en GitHub en la maquina local y trabajar con esos archivos
+                <br><br>
+                2) Una vez realizado el paso anterior lo que procedemos a realiazr es abrir una nueva consola en el repositorio local
+                <br><br>
+                3) hacemos un GIT add .
+                <br><br>
+                4) un Commit
+                <br><br>
+                5) Finalmente usamos este comando<br><br>
+                   GIT push  (link del repo)<br><br>
+                <strong>PASOS PARA MERGEAR UN REPOSITORIO</strong><br><br>
+                1) Pasar a la Rama Master con GIT checkout<br><br>
+                2) Desde la Rama Master hacer un GIT merge (nombre de la rama a la queremos mergear con la original)
+
+            </p>
         </article>
     </section>
     <footer>
-        <a href="#">↑</a>
+        <a href="#" class="resaltarVerde arrow">↑</a>
     </footer>
 <script src="script.js"></script>
 </body>
