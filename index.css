@@ -119,6 +119,10 @@ img{
     width: 100%;
 }
 
+.resaltarFunciones{
+    background: #cde69d;
+}
+
 @media (max-width: 599px){
     .grid{
         grid-template-columns: repeat(1, 1fr);
