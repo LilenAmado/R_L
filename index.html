@@ -143,17 +143,256 @@
 
             <p><strong>COUNTX(): Evalúa primero la expresión y devuelve el conteo basada en la expresión.</strong></p>
             <p>COUNTX(Tabla, Expresión)</p>
-            <p class="green">COUNTX(Product,[ListPrice])</p>
+            <p class="green">COUNTX(Product,[ListPrice])</p><br>
 
             <p><strong>RANKX():</strong></p>
             <p>RANKX(Tabla, Expresión, [Valor], [Orden], [Ties])</p><br>
 
-            <strong>
+<!--Falta-->
+            <p class="falta">
                 FALTAN 
                 PRODUCT()
                 FORMAT()
                 ITERATOR(“X”) FUNCTIONS
-            </strong>
+            </p><br>
+<!--Falta-->
+ 
+            <p><strong class="resaltarFunciones">Funciones Lógicas:</strong></p><br>
+           
+            <p><strong>IF(): </strong></p>
+            <p>IF(Logica, True, False)</p><br>
+
+            <p><strong>IFERROR():</strong></p>
+            <p>IFERROR(Valor, Valor Si es Error)</p><br>
+
+            <p><strong>AND():</strong></p>
+            <p>AND(Lógica 1, Lógica 2)</p><br>
+
+            <p><strong>OR():</strong></p>
+            <p>OR(Lógica 1, Lógica 2)</p><br>
+
+            <p><strong>NOT():</strong></p>
+            <p>NOT(Lógica)</p><br>
+
+            <p><strong>SWITCH(): Evalúa una expresión frente a una lista de valores y devuelve una de varias expresiones de resultado posibles. La expresión del primer argumento puede ser cualquier expresion DAX que devuelva un valor escalar.</strong></p>
+            <p>SWITCH(expression, value, result [, value, result]…[, else])</p>
+            <p class="green">SWITCH([Month], 1, "January", 2, "February", 3, "March", 4, "April"  
+                , 5, "May", 6, "June", 7, "July", 8, "August"  
+                , 9, "September", 10, "October", 11, "November", 12, "December"  
+                , "Unknown month number" )</p><br>
+
+            <p><strong>TRUE() y FALSE():</strong></p>
+            <p class="green">IF(SUM('InternetSales_USD'[SalesAmount_USD]) >200000, <tag style="color:black">TRUE(), false())</tag></p><br>
+
+            <p><strong>	COALESCE(): Devuelve la primera expresión que no se evalúa como BLANK. Si todas las expresiones dan como resultado BLANK, se devuelve BLANK. Sirve para reemplazar las funciones IF + ISBLANK.</strong></p>
+            <p>COALESCE(expression, expression [, expression]…)</p><br>
+            
+            <p><strong class="resaltarFunciones">Funciones Text:</strong></p><br>
+
+            <p><strong>CONCATENATE():</strong></p>
+            <p>CONCATENATE(Texto 1, Texto 2)</p><br>
+
+            <p><strong>FORMAT():</strong></p>
+            <p>FORMAT(value, format_string[, locale_name])</p>
+            <p class="green">
+                = FORMAT( 12345.67, "General Number")  <br>
+                = FORMAT( 12345.67, "Currency")  <br>
+                = FORMAT( 12345.67, "Fixed")  <br>
+                = FORMAT( 12345.67, "Standard")  <br>
+                = FORMAT( 12345.67, "Percent")  <br>
+                = FORMAT( 12345.67, "Scientific")
+            </p><br>
+            
+            <p><strong>LEFT():</strong></p>
+            <p>LEFT(Texto, número caracteres)</p><br>
+            
+            <p><strong>RIGHT():</strong></p>
+            <p>RIGHT(Texto, número caracteres)</p><br>
+
+            <p><strong>MID():</strong></p>
+            <p>MID(Texto, Número Inicial, Número de caracteres)</p>
+            <p class="green">MID("abcde",2,3))</p><br>
+
+            <p><strong>UPPER():</strong></p>
+            <p>UPPER(Texto)</p><br>
+
+            <p><strong>LOWER():</strong></p>
+            <p>LOWER(Texto)</p><br>
+
+            <p><strong>PROPER():</strong></p>
+            <p>PROPER(Texto)</p><br>
+
+            <p><strong>LEN():</strong></p>
+            <p>LEN(Texto)</p><br>
+
+            <p><strong>SEARCH():</strong></p>
+            <p>SEARCH(Texto que se quiera encontrar, Within Text, Posición Inicial, Si no se encuentra el valor)</p><br>
+
+<!--Falta-->
+<p class="falta">
+    FALTAN 
+    FIND()
+    REPLACE()
+    REPT()
+    TRIM()
+    UNICHAR()
+</p><br>
+<!--Falta-->
+
+            <p><strong>SUBSTITUTE():</strong></p>
+            <p>SUSTITUTE(Texto, Texto Viejo, Texto nuevo, Instance Number)</p><br>
+
+            <p><strong class="resaltarFunciones">Funciones Filter:</strong></p><br>
+
+<!--Falta-->
+<p class="falta">
+    CALCULATE()
+    FILTER()
+    ALL()
+    ALLEXCEPT()
+    RELATED()
+    RELATEDTABLE()
+    DISTINCT()
+    VALUES()
+    EARLIER()
+    EARLIEST()
+    HANDSONEVALUE()
+    HANDSONFILTER()
+    ISFILTERED()
+    USERELATIONSHIP()    
+</p><br>
+<!--Falta-->
+
+            <p><strong class="resaltarFunciones">Funciones Date & Time:</strong></p><br>
+<!--Falta-->       
+<p class="falta">
+    DATEIFF()
+    YEARFRAC()
+    YEAR()
+    MONTH()
+    DAY()
+    HOUR() 
+    MINUTE()
+    SECOND()
+    TODAY()
+    NOW()
+    WEEKDAY()
+    WEEKNUM()
+    DATESYTD()
+    DATESQTD()
+    DATESMTD()
+    DATEADD()
+    DATESINPERIOD()
+    Divide()    
+</p><br>   
+<!--Falta-->
+
+            <p><strong>Related() : related(nombre de columna)</strong></p>
+            <p>Devuelve valores relacionados en cada fila de una tabla en función de las relaciones con otras tablas</p><br>
+
+            <p><strong class="resaltarFunciones">Funciones ROUNDING:</strong></p><br>
+
+            <p><strong>ROUND(): Redondea un número a un número específico de dígitos</strong></p>
+            <p>ROUND(Número, Número de dígitos)</p><br>
+            
+            
+<!--Falta-->       
+<p class="falta">
+    FLOOR()
+    TRUNC()
+    ROUNDDOWN()
+    MROUND()
+    CEILING()
+    ISO.CEILING()
+    ROUNDUP()
+    INT()
+    FIXED()   
+</p><br>   
+<!--Falta-->
+            <p><strong class="resaltarFunciones">FUNCIONES DE INFORMACIÓN:</strong></p>
+
+            <p><strong>ISBLANK()</strong></p>
+            <p>Nombre = IF(ISBLANK([Columna]), "Está blanco", [Columna])</p><br>
+
+<p class="falta">
+    ISERROR()
+    ISLOGICAL()
+    ISNONTEXT()
+    ISNUMBER()
+    ISTEXT()    
+</p><br>   
+<!--Falta-->            
+            <p><strong class="resaltarFunciones">FUNCION DE CONVERSION:</strong></p>
+
+            <p><strong>INT(): Redondea un número hacia abajo al entero más cercano.</strong></p>
+            <p>INT(Número)</p><br>
+
+<!--Falta-->
+<p>
+    CURRENCY()
+    FORMAT()
+    DATE()
+    TIME()
+    DATEVALUE()
+    VALUE()
+</p><br>   
+<!--Falta-->   
+
+            <img src="img/PowerBI/PowerBI_7.jpg" alt=""><br><br>
+
+            <p><strong class="resaltarFunciones">Funciones modificadoras del contexto de filtro en el CALCULATE:</strong></p><br>
+
+            <p class="resaltarFunciones">Tener en cuenta: Los filtros del CALCULATE solo aceptan booleanos y funciones de tabla. Internamente, CALCULATE convierte todos los filtros en tablas.</p><br>
+
+            <p><strong class="resaltarFunciones">1-Para modificar filtros:</strong></p>
+            
+            <p><strong>REMOVEFILTERS(): Borrar filtros de las tablas o columnas especificadas. Funciona idéntico al ALL(), pero solo puede ser usado como modificador del CALCULATE.</strong></p>
+            <p>REMOVEFILTERS([table | column[, column[, column[,…]]]])</p><br>
+
+            <p><strong>KEEPFILTERS(): Modifica cómo se aplican los filtros al evaluar una función CALCULATE o CALCULATETABLE. No modifica los filtros existentes sino que suma un nuevo contexto de filtros. Cuando usa KEEPFILTERS, cualquier filtro existente en el contexto actual se compara con las columnas en los argumentos de filtro, y la intersección de esos argumentos se usa como contexto para evaluar la expresión. El efecto sobre cualquier columna es que se aplican ambos conjuntos de argumentos: tanto los argumentos de filtro usados en CALCULATE como los filtros en los argumentos de la función KEEPFILTER. En otras palabras, mientras que los filtros CALCULATE reemplazan el contexto actual, KEEPFILTERS agrega filtros al contexto actual.</strong></p>
+            <p>KEEPFILTERS(expression)</p><br>
+            
+            <p><strong>ALL(): Devuelve todas las filas de una tabla o todos los valores de una columna, ignorando cualquier filtro que se haya aplicado. Esta función no se usa sola, sino que sirve como una función intermedia que se puede usar para cambiar el conjunto de resultados sobre los que se realiza algún otro cálculo. ALL solo acepta como argumentos tablas físicas. Se usa cuando necesitamos ver valores sin filtrar y no queremos que el contexto de filtro actúe.</strong></p>
+            <p>ALL( [table o column[, column[, column[,…]]]] )</p><br>
+            
+            <p><strong>FILTER(): Devuelve una tabla que representa un subconjunto de otra tabla o expresión. Puede usar FILTER para reducir el número de filas en la tabla con la que está trabajando y usar solo datos específicos en los cálculos. FILTER no se usa de forma independiente, sino como una función que está incrustada en otras funciones que requieren una tabla como argumento.</strong></p>
+            <p>FILTER(table,filter)</p><br>
+            
+            <p><strong>DISTINCT(): Devuelve una tabla de una columna que contiene los distintos valores de la columna especificada. En otras palabras, los valores duplicados se eliminan y solo se devuelven valores únicos. Tener en cuenta: La función VALUES() es similar a DISTINCT(); también se puede utilizar para devolver una lista de valores únicos y, por lo general, devolverá exactamente los mismos resultados que DISTINCT. Sin embargo, en algún contexto, VALUES siempre muestra una fila en blanco por si hay valores “de más” en alguna de las tablas. </strong></p>
+            <p>DISTINCT(column)</p><br>
+
+            <p><strong>VALUES(): Cuando el parámetro de entrada es un nombre de columna, devuelve una tabla de una columna que contiene los distintos valores de la columna especificada. Los valores duplicados se eliminan y solo se devuelven valores únicos. Se agrega un valor EN BLANCO. Cuando el parámetro de entrada es un nombre de tabla, devuelve las filas de la tabla especificada. Las filas duplicadas se conservan. Se agrega una fila EN BLANCO. Esta función no se puede usar para devolver valores a una celda o columna en una hoja de trabajo; más bien, lo usa como una función intermedia, anidada en una fórmula, para obtener una lista de valores distintos que se pueden contar o usar para filtrar o sumar otros valores. Cuando usa la función en un contexto que ha sido filtrado, los valores únicos devueltos por VALUES se ven afectados por el filtro.</strong></p>
+            <p>VALUES(TableNameOrColumnName)</p><br>
+
+            <p><strong>SELECTVALUE(): Devuelve el valor cuando el contexto de columnName se ha filtrado a un solo valor distinto. De lo contrario, devuelve resultado alternativo.</strong></p>
+            <p>SELECTEDVALUE(columnName[, alternateResult])</p><br>
+
+            <p><strong>ALLEXCEPT(): Elimina todos los filtros de contexto de la tabla, excepto los que se han aplicado a las columnas especificadas. El primer argumento de la función ALLEXCEPT debe ser una referencia a una tabla base. Todos los argumentos posteriores deben ser referencias a columnas base. No puede usar expresiones de tabla o expresiones de columna con la función ALLEXCEPT. Esta función no se usa sola, sino que sirve como una función intermedia que se puede usar para cambiar el conjunto de resultados sobre los que se realiza algún otro cálculo. Conveniente para situaciones en las que desea eliminar los filtros en muchas columnas de una tabla, pero no en todas.</strong></p>
+            <p>ALLEXCEPT(table, column[,column[,…]])</p><br>
+
+            <p><strong>ALLSELECTED(): Elimina los filtros de contexto de las columnas y filas de la consulta actual, al tiempo que conserva todos los demás filtros de contexto o filtros explícitos. La función ALLSELECTED obtiene el contexto que representa todas las filas y columnas de la consulta, al tiempo que mantiene filtros y contextos explícitos distintos de los filtros de fila y columna. Esta función se puede utilizar para obtener totales visuales en las consultas. Si hay un argumento, el argumento es tableName o columnName . Si hay más de un argumento, deben ser columnas de la misma tabla. Esta función es diferente de ALL() porque conserva todos los filtros establecidos explícitamente dentro de la consulta y conserva todos los filtros de contexto que no sean los filtros de fila y columna.</strong></p>
+            <p>ALLSELECTED([tableName | columnName[, columnName[, columnName[,…]]]] )</p><br>
+            
+            <p><strong>SELECTCOLUMNS(): Retorna una tabla con el mismo número de filas que la tabla especificada como primer argumento. La tabla devuelta tiene una columna para cada par de argumentos name, scalar_expression, y cada expresión se evalúa en el contexto de una fila del argumento table especificado. SELECTCOLUMNS tiene la misma firma que ADDCOLUMNS y tiene el mismo comportamiento excepto que en lugar de comenzar con la tabla especificada, SELECTCOLUMNS comienza con una tabla vacía antes de agregar columnas.</strong></p>
+            <p>SELECTCOLUMNS(table, name, scalar_expression [, name, scalar_expression]…)</p><br>
+
+            <p><strong>ADDCOLUMNS(): Agrega columnas calculadas a la tabla o expresión de tabla dada.</strong></p>
+            <p>ADDCOLUMNS(table, name, expression[, name, expression]…)</p><br>
+
+            <p><strong>SUMMARIZE(): Devuelve una tabla de resumen de los totales solicitados en un conjunto de grupos. Cada columna para la que defina un nombre debe tener una expresión correspondiente; de lo contrario, se devuelve un error. El primer argumento, nombre, define el nombre de la columna en los resultados. El segundo argumento, expresión, define el cálculo realizado para obtener el valor de cada fila de esa columna.</strong></p>
+            <p>SUMMARIZE (table, groupBy_columnName[, groupBy_columnName]…[, name, expression]…)</p><br>
+
+            <p><strong></strong></p>
+            <p></p><br>
+
+            <p><strong></strong></p>
+            <p></p><br>
+
+            <p><strong></strong></p>
+            <p></p><br>
+
+            <p><strong></strong></p>
+            <p></p><br>
 
             <p><strong></strong></p>
             <p></p><br>
