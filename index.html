@@ -9,6 +9,7 @@
     <title>Resumenes</title>
 </head>
 <body class="grid">
+
     <!-- Buscador -->
     <section id="contenedor_buscador">
         <div>
@@ -19,7 +20,7 @@
                 <a href="#PowerBI"><li class="articulo">&nbsp;&nbsp;&nbsp;➜ Power BI</li></a>
                 <a href="#PowerAutomate"><li class="articulo">&nbsp;&nbsp;&nbsp;➜ Power Automate</li></a>
                 <a href="#SSIS"><li class="articulo">&nbsp;&nbsp;&nbsp;➜ SSIS</li></a>
-                <a href=""><li class="articulo">&nbsp;&nbsp;&nbsp;➜ SQL</li></a>
+                <a href="#SQL"><li class="articulo">&nbsp;&nbsp;&nbsp;➜ SQL</li></a>
                 <br><p>Lenguajes</p>
                 <a href=""><li class="articulo">&nbsp;&nbsp;&nbsp;➜ Python</li></a>
                 <a href=""><li class="articulo">&nbsp;&nbsp;&nbsp;➜ Javascript</li></a>
@@ -28,13 +29,17 @@
             </ul>
         </div>
     </section>
+
+    <!-- Contenido -->
     <section class="resumenes">
+
         <article class="">
             <h1>Resumenes</h1><br>
         </article>
         
+        <!-- PBI -->
         <article class="" id="PowerBI">
-            <h2 class="resaltarVerde">Power BI</h2> <br>
+            <h2 class="titulos">Power BI</h2> <br>
             <p><strong>Llave primaria (PK): </strong></p>
             <p>Es el identificador de columna de la tabla en nos encontramos. Es un valor único que hace una distinción entre cada fila de la tabla especificada. No puede repetirse en la misma tabla. </p>
             <br>
@@ -75,12 +80,12 @@
             <p>CALCULATE(Expresión, [Filtro 1], …)</p>
             
 
-            <p class="green"> 
+            <p class="comentario"> 
                 CALCULATE([Ventas]) >> Trae lo mismo que la columna original.
                 CALCULATE([Ventas], Producto[Marca] = “Conexión TI”) >> Filtra por marca.
             </p><br>
 
-            <p><strong class="resaltarFunciones">Funciones Math & Stats:</strong></p><br>
+            <p><strong class="funcion">Funciones Math & Stats:</strong></p><br>
 
             <p><strong>SUM(): Suma todos los valores de una columna.</strong></p>
             <p>SUM(Columna)</p><br>
@@ -91,7 +96,7 @@
             <p><strong>MAX(): Devuelve el valor más grande en una columna o entre dos expresiones escalares</strong></p>
             <p>MAX(Columna) </p>
             <p>MAX(Expresión 1, Expresión 2]) </p>
-            <p class="green">MAX(5*4, 5*5) </p><br>
+            <p class="comentario">MAX(5*4, 5*5) </p><br>
 
             <p><strong>MIN(): Devuelve el valor más pequeño en una columna o entre dos expresiones escalares. Mismo que MAX</strong></p>
             <p>MIN(Columna)</p>
@@ -114,18 +119,18 @@
 
             <p><strong>DISTINCTCOUNT(): Cuenta el número de valores distintos o únicos en una columna</strong></p>
             <p>DISTINCTCOUNT(Columna)</p>
-            <p class="green">No repite los resultados iguales</p><br>
+            <p class="comentario">No repite los resultados iguales</p><br>
 
-            <p><strong class="resaltarFunciones">Funciones Iterativas X</strong></p><br>
+            <p><strong class="funcion">Funciones Iterativas X</strong></p><br>
 
             <p><strong>SUMX(): Suma los resultados de las operaciones de cada fila de la tabla.</strong></p>
             <p>SUMX(Tabla, Expresión)</p><br>
-            <p class="green">En vez de SUM(Columna1) * SUM(Columna2)</p>
-            <p class="green">SUMX(Tabla, Columna1  * Columna2)</p><br>
-            <p class="green">SUMX(</p>
-            <p class="green">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Tabla_Ventas,</p>
-            <p class="green">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Tabla_Ventas[PrecioUnidad] * Tabla_Ventas[Cantidad]</p>
-            <p class="green">)</p><br>
+            <p class="comentario">En vez de SUM(Columna1) * SUM(Columna2)</p>
+            <p class="comentario">SUMX(Tabla, Columna1  * Columna2)</p><br>
+            <p class="comentario">SUMX(</p>
+            <p class="comentario">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Tabla_Ventas,</p>
+            <p class="comentario">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Tabla_Ventas[PrecioUnidad] * Tabla_Ventas[Cantidad]</p>
+            <p class="comentario">)</p><br>
 
             <img src="img/PowerBI/PowerBI_6.jpg" alt=""><br><br>
             
@@ -135,7 +140,7 @@
 
             <p><strong>MAXX(): Evalúa una expresión en función de las filas de una tabla que le pasamos como primer parámetro. Va fila por fila evaluando la expresión y devuelve el valor máximo que resulte de esa expresión.</strong></p>
             <p>MAXX(Tabla, Expresión)</p>
-            <p class="green">MAXX(Items, Items[Precio] - Items[Costo]) <br> 
+            <p class="comentario">MAXX(Items, Items[Precio] - Items[Costo]) <br> 
             // Primero hace la resta y luego busca entre todos cuál es el mayor.</p><br>
 
             <p><strong>MINX():</strong></p>
@@ -143,7 +148,7 @@
 
             <p><strong>COUNTX(): Evalúa primero la expresión y devuelve el conteo basada en la expresión.</strong></p>
             <p>COUNTX(Tabla, Expresión)</p>
-            <p class="green">COUNTX(Product,[ListPrice])</p><br>
+            <p class="comentario">COUNTX(Product,[ListPrice])</p><br>
 
             <p><strong>RANKX():</strong></p>
             <p>RANKX(Tabla, Expresión, [Valor], [Orden], [Ties])</p><br>
@@ -157,7 +162,7 @@
             </p><br>
 <!--Falta-->
  
-            <p><strong class="resaltarFunciones">Funciones Lógicas:</strong></p><br>
+            <p><strong class="funcion">Funciones Lógicas:</strong></p><br>
            
             <p><strong>IF(): </strong></p>
             <p>IF(Logica, True, False)</p><br>
@@ -176,25 +181,25 @@
 
             <p><strong>SWITCH(): Evalúa una expresión frente a una lista de valores y devuelve una de varias expresiones de resultado posibles. La expresión del primer argumento puede ser cualquier expresion DAX que devuelva un valor escalar.</strong></p>
             <p>SWITCH(expression, value, result [, value, result]…[, else])</p>
-            <p class="green">SWITCH([Month], 1, "January", 2, "February", 3, "March", 4, "April"  
+            <p class="comentario">SWITCH([Month], 1, "January", 2, "February", 3, "March", 4, "April"  
                 , 5, "May", 6, "June", 7, "July", 8, "August"  
                 , 9, "September", 10, "October", 11, "November", 12, "December"  
                 , "Unknown month number" )</p><br>
 
             <p><strong>TRUE() y FALSE():</strong></p>
-            <p class="green">IF(SUM('InternetSales_USD'[SalesAmount_USD]) >200000, <tag style="color:black">TRUE(), false())</tag></p><br>
+            <p class="comentario">IF(SUM('InternetSales_USD'[SalesAmount_USD]) >200000, <tag style="color:black">TRUE(), false())</tag></p><br>
 
             <p><strong>	COALESCE(): Devuelve la primera expresión que no se evalúa como BLANK. Si todas las expresiones dan como resultado BLANK, se devuelve BLANK. Sirve para reemplazar las funciones IF + ISBLANK.</strong></p>
             <p>COALESCE(expression, expression [, expression]…)</p><br>
             
-            <p><strong class="resaltarFunciones">Funciones Text:</strong></p><br>
+            <p><strong class="funcion">Funciones Text:</strong></p><br>
 
             <p><strong>CONCATENATE():</strong></p>
             <p>CONCATENATE(Texto 1, Texto 2)</p><br>
 
             <p><strong>FORMAT():</strong></p>
             <p>FORMAT(value, format_string[, locale_name])</p>
-            <p class="green">
+            <p class="comentario">
                 = FORMAT( 12345.67, "General Number")  <br>
                 = FORMAT( 12345.67, "Currency")  <br>
                 = FORMAT( 12345.67, "Fixed")  <br>
@@ -211,7 +216,7 @@
 
             <p><strong>MID():</strong></p>
             <p>MID(Texto, Número Inicial, Número de caracteres)</p>
-            <p class="green">MID("abcde",2,3))</p><br>
+            <p class="comentario">MID("abcde",2,3))</p><br>
 
             <p><strong>UPPER():</strong></p>
             <p>UPPER(Texto)</p><br>
@@ -242,7 +247,7 @@
             <p><strong>SUBSTITUTE():</strong></p>
             <p>SUSTITUTE(Texto, Texto Viejo, Texto nuevo, Instance Number)</p><br>
 
-            <p><strong class="resaltarFunciones">Funciones Filter:</strong></p><br>
+            <p><strong class="funcion">Funciones Filter:</strong></p><br>
 
 <!--Falta-->
 <p class="falta">
@@ -263,7 +268,7 @@
 </p><br>
 <!--Falta-->
 
-            <p><strong class="resaltarFunciones">Funciones Date & Time:</strong></p><br>
+            <p><strong class="funcion">Funciones Date & Time:</strong></p><br>
 <!--Falta-->       
 <p class="falta">
     DATEIFF()
@@ -290,7 +295,7 @@
             <p><strong>Related() : related(nombre de columna)</strong></p>
             <p>Devuelve valores relacionados en cada fila de una tabla en función de las relaciones con otras tablas</p><br>
 
-            <p><strong class="resaltarFunciones">Funciones ROUNDING:</strong></p><br>
+            <p><strong class="funcion">Funciones ROUNDING:</strong></p><br>
 
             <p><strong>ROUND(): Redondea un número a un número específico de dígitos</strong></p>
             <p>ROUND(Número, Número de dígitos)</p><br>
@@ -309,7 +314,7 @@
     FIXED()   
 </p><br>   
 <!--Falta-->
-            <p><strong class="resaltarFunciones">FUNCIONES DE INFORMACIÓN:</strong></p>
+            <p><strong class="funcion">FUNCIONES DE INFORMACIÓN:</strong></p>
 
             <p><strong>ISBLANK()</strong></p>
             <p>Nombre = IF(ISBLANK([Columna]), "Está blanco", [Columna])</p><br>
@@ -322,7 +327,7 @@
     ISTEXT()    
 </p><br>   
 <!--Falta-->            
-            <p><strong class="resaltarFunciones">FUNCION DE CONVERSION:</strong></p>
+            <p><strong class="funcion">FUNCION DE CONVERSION:</strong></p>
 
             <p><strong>INT(): Redondea un número hacia abajo al entero más cercano.</strong></p>
             <p>INT(Número)</p><br>
@@ -340,11 +345,11 @@
 
             <img src="img/PowerBI/PowerBI_7.jpg" alt=""><br><br>
 
-            <p><strong class="resaltarFunciones">Funciones modificadoras del contexto de filtro en el CALCULATE:</strong></p><br>
+            <p><strong class="funcion">Funciones modificadoras del contexto de filtro en el CALCULATE:</strong></p><br>
 
-            <p class="resaltarFunciones">Tener en cuenta: Los filtros del CALCULATE solo aceptan booleanos y funciones de tabla. Internamente, CALCULATE convierte todos los filtros en tablas.</p><br>
+            <p class="funcion">Tener en cuenta: Los filtros del CALCULATE solo aceptan booleanos y funciones de tabla. Internamente, CALCULATE convierte todos los filtros en tablas.</p><br>
 
-            <p><strong class="resaltarFunciones">1-Para modificar filtros:</strong></p>
+            <p><strong class="funcion">1-Para modificar filtros:</strong></p>
             
             <p><strong>REMOVEFILTERS(): Borrar filtros de las tablas o columnas especificadas. Funciona idéntico al ALL(), pero solo puede ser usado como modificador del CALCULATE.</strong></p>
             <p>REMOVEFILTERS([table | column[, column[, column[,…]]]])</p><br>
@@ -382,7 +387,7 @@
             <p><strong>SUMMARIZE(): Devuelve una tabla de resumen de los totales solicitados en un conjunto de grupos. Cada columna para la que defina un nombre debe tener una expresión correspondiente; de lo contrario, se devuelve un error. El primer argumento, nombre, define el nombre de la columna en los resultados. El segundo argumento, expresión, define el cálculo realizado para obtener el valor de cada fila de esa columna.</strong></p>
             <p>SUMMARIZE (table, groupBy_columnName[, groupBy_columnName]…[, name, expression]…)</p><br>
 
-            <p><strong></strong></p>
+           <!-- <p><strong></strong></p>
             <p></p><br>
 
             <p><strong></strong></p>
@@ -395,13 +400,49 @@
             <p></p><br>
 
             <p><strong></strong></p>
-            <p></p><br>
+            <p></p><br>-->
         </article>
 
         <br>
 
+        <!-- SQL -->
+        <article class="" id="SQL">
+            <h2 class="titulos">SQL</h2>
+            <br>
+             
+            <p class="funcion" style="padding-left:2%;">
+                <strong>Tipo de datos: <br></strong>
+                - Numeros y enteros: INT - TYNEINT - SMALLINT... <br>
+                - Números con decimales: FLOAT - DOUBLE - DECIMAL <br>
+                - Texto y Datos Binarios: VARCHAR - CHAR -
+                 TEXT - ENUM - BLOB <br>
+                - Fecha y hora: DATE - TIME - DATETIME - TIMESTAMP - YEAR <br>
+                </p><br>
+
+            <p><strong class="funcion">MySQL:</strong> Administrador de Bases de datos (BD). </p><br>
+            <p><strong>Mostrar Bases de datos: </strong>SHOW DATABASES; <i class="comentario">-- Para observar las bases de datos</i></p><br>
+            
+            <p><strong>Crear base de datos:</strong> CREATE DATABASE nombre</p><br>
+            <p><strong>Entrar a la base de datos: </strong></p>
+            <p>USE nombre_de_bd</p><br>
+            <p><strong>Crear tabla:</strong></p>
+            <p>CREATE TABLE nombre_de_tabla_a_crear(</p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;id INT (11) <i class="comentario">-- (11) de la cantidad de caracteres que soporta 4200 millones de registros</i><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; NOT NULL <i class="comentario"> -- NOT NULL que no puede tener valor nulo</i><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; AUTO_INCREMENT, <i class="comentario">-- Que sea autoincremental</i><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;nombre VARCHAR(60) NOT NULL, &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;precio DECIMAL(6,2) NOT NULL <i class="comentario">-- (6,2) por ejemplo &nbsp;&nbsp;&nbsp;100000,23</i><br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PRIMARY KEY(id) <br>);</p><br>
+
+            <p><strong>Ver estructura de la tabla:</strong></p>
+            <p>DESCRIBE nombre_de_la_tabla</p><br>
+
+            <p><strong></strong></p>
+            <p></p><br>
+
+            <!--Resaltar funciones resaltar verde-->
+        </article>
+
+        <br>
+
+        <!-- GIT -->
         <article class="" id="GIT">
-            <h2 class="resaltarVerde">GIT</h2>
+            <h2 class="titulos">GIT</h2>
             <br>
             <p>
                 <strong>GIT init: </strong> Se usa para iniciar un repositorio en una carpeta.
@@ -450,9 +491,11 @@
 
             
         </article>
+
     </section>
+
     <footer>
-        <a href="#" class="resaltarVerde arrow">↑</a>
+        <a href="#" class="titulos arrow">↑</a>
     </footer>
 <script src="script.js"></script>
 </body>
