@@ -24,6 +24,12 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    overflow: scroll;
+    /* border:1px solid;
+        height:100px;
+        width:300px;
+    overflow-y:scroll;
+    overflow-x:hidden; */
 }
 
 #buscador{
@@ -131,7 +137,20 @@ img{
     position: fixed;
 }
 
-@media (max-width: 599px){
+/* SCROLLBAR 
+#contenedor_buscador::-webkit-scrollbar-thumb {
+    background: #ff9d00;
+    border-radius: 5px;
+}
+#contenedor_buscador:-webkit-scrollbar {
+    width: 7px;
+}*/
+
+a{
+    color: #8843F2;
+}
+
+@media (max-width: 840px){
     .grid{
         grid-template-columns: repeat(1, 1fr);
     }

@@ -38,6 +38,7 @@
         <!-- Data Warehouse -->
         <article id="DW">
             <h2 class="titulos">Data Warehouse</h2> <br>
+            <p><strong>Documentación de DW: <a href="Documentos/DW.pdf">Aquí</a></strong></p><br>
 
             <p><strong>Data Warehouse:</strong></p>
             <p>Es una arquitectura de almacenamiento diseñada para contener datos extraídos de sistemas transaccionales, almacenes de datos y fuentes externas.</p><br> 
@@ -63,8 +64,12 @@
             <p><strong>Kimball: </strong></p>
             <img src="img/DW/2.png" alt="">
 
-            <p><strong></strong></p>
-            <p></p><br>
+            <p><strong>ODS</strong></p>
+            <img src="img/DW/3.jpg" alt="">
+
+            
+
+            <!--<p></p><br>-->
         </article>
 
         <!-- PBI -->
@@ -103,6 +108,17 @@
             <p><a href="https://www.daxformatter.com/">https://www.daxformatter.com/</a></p>
           
             <br>
+
+            <p><strong>VAR - RETURN:</strong></p>
+            <p>YoY% = <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;VAR Sales = SUM(SalesTable[SalesAmount]) <br> 
+
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;VAR SalesLastYear =
+                    CALCULATE ( SUM ( SalesTable[SalesAmount] ), <br> 
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SAMEPERIODLASTYEAR ( 'Calendar'[Date] ) )
+                    <br><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;RETURN if(Sales, DIVIDE(Sales – SalesLastYear, Sales))
+                </p> <br>
 
             <p><strong> CALCULATE():</strong></p>   
             <p>Filtrar</p>  
