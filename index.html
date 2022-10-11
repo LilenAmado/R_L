@@ -7,6 +7,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="index.css">
     <title>Resumenes</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 <body class="grid">
 
@@ -15,534 +17,597 @@
         <div class="position">
             <input type="text" name="buscador" id="buscador" placeholder="Buscar...">
             <ul id="listaArticulos">
+
                 <p>BI</p>
-                <a href="#DW"><li class="articulo">&nbsp;&nbsp;&nbsp;➜ Data Warehouse</li></a>
-                <a href="#PowerBI"><li class="articulo">&nbsp;&nbsp;&nbsp;➜ Power BI</li></a>
-                <a href="#PowerAutomate"><li class="articulo">&nbsp;&nbsp;&nbsp;➜ Power Automate</li></a>
-                <a href="#SSIS"><li class="articulo">&nbsp;&nbsp;&nbsp;➜ SSIS</li></a>
-                <a href="#SQL"><li class="articulo">&nbsp;&nbsp;&nbsp;➜ SQL</li></a>
+
+                <a href="#DW_content" id="DW">
+                    <li class="articulo">&nbsp;&nbsp;&nbsp;➜ Data Warehouse</li>
+                </a>
+
+                <a href="#PowerBI_content" id="PowerBI">
+                    <li class="articulo">&nbsp;&nbsp;&nbsp;➜ Power BI</li>
+                </a>
+
+                <a href="">
+                    <li class="articulo">&nbsp;&nbsp;&nbsp;➜ Power Automate</li>
+                </a>
+
+                <a href="">
+                    <li class="articulo">&nbsp;&nbsp;&nbsp;➜ SSIS</li>
+                </a>
+
+                <a href="#SQL_content" id="SQL">
+                    <li class="articulo">&nbsp;&nbsp;&nbsp;➜ SQL</li>
+                </a>
+
                 <br><p>Lenguajes</p>
-                <a href=""><li class="articulo">&nbsp;&nbsp;&nbsp;➜ Python</li></a>
-                <a href="#GIT"><li class="articulo">&nbsp;&nbsp;&nbsp;➜ GIT</li></a>
+
+                <a href="">
+                    <li class="articulo">&nbsp;&nbsp;&nbsp;➜ Python</li>
+                </a>
+
+                <a href="#GIT_content" id="GIT">
+                    <li class="articulo">&nbsp;&nbsp;&nbsp;➜ GIT</li>
+                </a>
+
             </ul>
         </div>
     </section>
 
     <!-- Contenido -->
     <section class="resumenes">
-
-        <article class="">
+        
+        <article id="bienvenido">
             <h1>Resumenes</h1><br>
+            <p>Elegir un tema para ver su resumen.</p> <br>
         </article>
         
-        <!-- Data Warehouse -->
-        <article id="DW">
-            <h2 class="titulos">Data Warehouse</h2> <br>
-            <p><strong>Documentación de DW: <a href="Documentos/DW.pdf">Aquí</a></strong></p><br>
+        <div id="resumenes">
+            <!-- Data Warehouse -->
+            <article id="DW_content">
+                <br><h2 class="titulos">Data Warehouse</h2> <br>
+                <p><strong>Documentación de DW: <a href="Documentos/DW.pdf">Aquí</a></strong></p><br>
 
-            <p><strong>Data Warehouse:</strong></p>
-            <p>Es una arquitectura de almacenamiento diseñada para contener datos extraídos de sistemas transaccionales, almacenes de datos y fuentes externas.</p><br> 
-            <p>El almacen combina esos datos restructurandonos de una forma de resumen agregada adecuada para el análisis de datos de la empresa y generación de informes.</p>
-            <p>Fundamentos: Objetivo - integrado - No volátil - Variante en el tiempo - Toma de decisiones.</p><br>
+                <p><strong>Data Warehouse:</strong></p>
+                <p>Es una arquitectura de almacenamiento diseñada para contener datos extraídos de sistemas transaccionales, almacenes de datos y fuentes externas.</p><br> 
+                <p>El almacen combina esos datos restructurandonos de una forma de resumen agregada adecuada para el análisis de datos de la empresa y generación de informes.</p>
+                <p>Fundamentos: Objetivo - integrado - No volátil - Variante en el tiempo - Toma de decisiones.</p><br>
 
-            <p><strong>Data Marts:</strong> El DW podría decirse que se compone de diferentes DM</p>
-            <p>Corresponde a un área de negocio.</p>
-            <p>Es la extracción de la información sobre un proceso en especial. Data Mart de RRHH, Ventas, Compras, etc. </p><br>
+                <p><strong>Data Marts:</strong> El DW podría decirse que se compone de diferentes DM</p>
+                <p>Corresponde a un área de negocio.</p>
+                <p>Es la extracción de la información sobre un proceso en especial. Data Mart de RRHH, Ventas, Compras, etc. </p><br>
 
-            <p><strong>OLAP - CUBO:</strong></p>
-            <p>Es un motor semántico, un traductor que hace es quitar la complejidad de técnica a un area de negocio y sea entendible</p><br>
+                <p><strong>OLAP - CUBO:</strong></p>
+                <p>Es un motor semántico, un traductor que hace es quitar la complejidad de técnica a un area de negocio y sea entendible</p><br>
 
-            <p><strong class="funcion">Arquitectura del DW:</strong></p><br>
-            <img src="img/DW/0.png" alt="">
+                <p><strong class="funcion">Arquitectura del DW:</strong></p><br>
+                <img src="img/DW/0.png" alt="">
 
-            <p><strong>Staging Area:</strong></p>
-            <p>Es una copia de lo que tenemos en el sistema transaccional. (Para no ir y venir al transaccional utilizamos el SG donde traemos toda la info.</p><br>
-            
-            <p><strong>Inmon: </strong></p>
-            <img src="img/DW/1.png" alt="">
+                <p><strong>Staging Area:</strong></p>
+                <p>Es una copia de lo que tenemos en el sistema transaccional. (Para no ir y venir al transaccional utilizamos el SG donde traemos toda la info.</p><br>
+                
+                <p><strong>Inmon: </strong></p>
+                <img src="img/DW/1.png" alt="">
 
-            <p><strong>Kimball: </strong></p>
-            <img src="img/DW/2.png" alt="">
+                <p><strong>Kimball: </strong></p>
+                <img src="img/DW/2.png" alt="">
 
-            <p><strong>ODS</strong></p>
-            <img src="img/DW/3.jpg" alt="">
+                <p><strong>ODS</strong></p>
+                <img src="img/DW/3.jpg" alt="">
 
-            
-
-            <!--<p></p><br>-->
-        </article>
-
-        <!-- PBI -->
-        <article class="" id="PowerBI">
-            <h2 class="titulos">Power BI</h2> <br>
-            <p><strong>Llave primaria (PK): </strong></p>
-            <p>Es el identificador de columna de la tabla en nos encontramos. Es un valor único que hace una distinción entre cada fila de la tabla especificada. No puede repetirse en la misma tabla. </p>
-            <br>
-            <p><strong>Llave foránea (FK): </strong></p>
-            <p>Es una llave primaria (PK) que pertenece a otra tabla, pero que la usamos para relacionar las tablas. Utilizamos las claves principales como externas en nuestra tabla de hechos. Estás pueden repetirse.</p>
-            <br>
-            <p>En las <strong>tablas dim</strong> la información no se repite, es única.</p> <br>
-            <p>En las <strong>tablas de hecho</strong> si puede repetirse el número de cliente por ejemplo (FK) pero no el número de factura (PK)</p>
-
-            <br>
-
-            <img src="img/PowerBI/PowerBI_1.jpg" alt=""><br><br>
-          
-            <p><strong>- Power Query:</strong></p>
                 <br>
-            <p><strong>Pivot y Unpivot:</strong></p>
-            <p>Es una llave primaria (PK) que pertenece a otra tabla, pero que la usamos para relacionar las tablas. Utilizamos las claves principales como externas en nuestra tabla de hechos. Estás pueden repetirse.</p>
-            
-            <br>
-           
-            <img src="img/PowerBI/PowerBI_2.jpg" alt="">
-            <img src="img/PowerBI/PowerBI_3.jpg" alt="">
-            <img src="img/PowerBI/PowerBI_4.jpg" alt="">
-            <br><br>
 
-            <p><strong>Trim:</strong></p><br>
-            <img src="img/PowerBI/PowerBI_5.jpg" alt=""><br><br>
-                 
-            <p><strong>Dax:</strong></p>
-            <p><a href="https://docs.microsoft.com/en-us/dax/">https://docs.microsoft.com/en-us/dax/</a></p>
-            <p><a href="https://www.daxformatter.com/">https://www.daxformatter.com/</a></p>
-          
+                <!--<p></p><br>-->
+                
+            </article>
+
             <br>
 
-            <p><strong>VAR - RETURN:</strong></p>
-            <p>YoY% = <br>
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;VAR Sales = SUM(SalesTable[SalesAmount]) <br> 
+            <!-- PBI -->
+            <article class="" id="PowerBI_content">
+                <h2 class="titulos">Power BI</h2> <br>
+                <p><strong>Llave primaria (PK): </strong></p>
+                <p>Es el identificador de columna de la tabla en nos encontramos. Es un valor único que hace una distinción entre cada fila de la tabla especificada. No puede repetirse en la misma tabla. </p>
+                <br>
+                <p><strong>Llave foránea (FK): </strong></p>
+                <p>Es una llave primaria (PK) que pertenece a otra tabla, pero que la usamos para relacionar las tablas. Utilizamos las claves principales como externas en nuestra tabla de hechos. Estás pueden repetirse.</p>
+                <br>
+                <p>En las <strong>tablas dim</strong> la información no se repite, es única.</p> <br>
+                <p>En las <strong>tablas de hecho</strong> si puede repetirse el número de cliente por ejemplo (FK) pero no el número de factura (PK)</p>
 
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;VAR SalesLastYear =
-                    CALCULATE ( SUM ( SalesTable[SalesAmount] ), <br> 
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SAMEPERIODLASTYEAR ( 'Calendar'[Date] ) )
-                    <br><br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;RETURN if(Sales, DIVIDE(Sales – SalesLastYear, Sales))
-                </p> <br>
+                <br>
 
-            <p><strong> CALCULATE():</strong></p>   
-            <p>Filtrar</p>  
-            <p><a href="https://www.youtube.com/watch?v=6lcZ5J-2NRQ">https://www.youtube.com/watch?v=6lcZ5J-2NRQ</a></p> 
-            <p>CALCULATE(Expresión, [Filtro 1], …)</p>
+                <img src="img/PowerBI/PowerBI_1.jpg" alt=""><br><br>
             
-
-            <p class="comentario"> 
-                CALCULATE([Ventas]) >> Trae lo mismo que la columna original.
-                CALCULATE([Ventas], Producto[Marca] = “Conexión TI”) >> Filtra por marca.
-            </p><br>
-
-            <p><strong class="funcion">Funciones Math & Stats:</strong></p><br>
-
-            <p><strong>SUM(): Suma todos los valores de una columna.</strong></p>
-            <p>SUM(Columna)</p><br>
-
-            <p><strong>AVERAGE(): Devuelve el promedio de todos los números de una columna</strong></p>
-            <p>AVERAGE(Columna)</p><br>
-
-            <p><strong>MAX(): Devuelve el valor más grande en una columna o entre dos expresiones escalares</strong></p>
-            <p>MAX(Columna) </p>
-            <p>MAX(Expresión 1, Expresión 2]) </p>
-            <p class="comentario">MAX(5*4, 5*5) </p><br>
-
-            <p><strong>MIN(): Devuelve el valor más pequeño en una columna o entre dos expresiones escalares. Mismo que MAX</strong></p>
-            <p>MIN(Columna)</p>
-            <p>MIN(Expresión 1, Expresión 2])</p><br>
-
-            <p><strong>DIVIDE(): Es mejor que utilizar el “/” porque si hay un error se puede poner un valor alternativo. </strong></p>
-            <p>DIVIDE(Numerador, Denominador, Resultado Alternativo)</p><br>
-
-            <p><strong>COUNT(): Cuenta todos los números de filas que hay en una columna que contiene números.</strong></p>
-            <p>COUNT(Columna)</p><br>
-
-            <p><strong>COUNTA(): Cuenta el número de valores en una columna. En blanco no los cuenta.</strong></p>
-            <p>COUNTA(Columna)</p><br>
-
-            <p><strong>COUNTROWS(): Cuenta el número de filas en la tabla de una columna específica o una tabla definida por una expresión. Cuenta los registros en blanco también.</strong></p>
-            <p>COUNTROWS(Tabla)</p><br>
-
-            <p><strong>COUNTBLANK(): Cuenta todas las filas que estan en blanco</strong></p>
-            <p>COUNTBLANK(Columna)</p><br>
-
-            <p><strong>DISTINCTCOUNT(): Cuenta el número de valores distintos o únicos en una columna</strong></p>
-            <p>DISTINCTCOUNT(Columna)</p>
-            <p class="comentario">No repite los resultados iguales</p><br>
-
-            <p><strong class="funcion">Funciones Iterativas X</strong></p><br>
-
-            <p><strong>SUMX(): Suma los resultados de las operaciones de cada fila de la tabla.</strong></p>
-            <p>SUMX(Tabla, Expresión)</p><br>
-            <p class="comentario">En vez de SUM(Columna1) * SUM(Columna2)</p>
-            <p class="comentario">SUMX(Tabla, Columna1  * Columna2)</p><br>
-            <p class="comentario">SUMX(</p>
-            <p class="comentario">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Tabla_Ventas,</p>
-            <p class="comentario">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Tabla_Ventas[PrecioUnidad] * Tabla_Ventas[Cantidad]</p>
-            <p class="comentario">)</p><br>
-
-            <img src="img/PowerBI/PowerBI_6.jpg" alt=""><br><br>
+                <p><strong>- Power Query:</strong></p>
+                    <br>
+                <p><strong>Pivot y Unpivot:</strong></p>
+                <p>Es una llave primaria (PK) que pertenece a otra tabla, pero que la usamos para relacionar las tablas. Utilizamos las claves principales como externas en nuestra tabla de hechos. Estás pueden repetirse.</p>
+                
+                <br>
             
+                <img src="img/PowerBI/PowerBI_2.jpg" alt="">
+                <img src="img/PowerBI/PowerBI_3.jpg" alt="">
+                <img src="img/PowerBI/PowerBI_4.jpg" alt="">
+                <br><br>
+
+                <p><strong>Trim:</strong></p><br>
+                <img src="img/PowerBI/PowerBI_5.jpg" alt=""><br><br>
+                    
+                <p><strong>Dax:</strong></p>
+                <p><a href="https://docs.microsoft.com/en-us/dax/">https://docs.microsoft.com/en-us/dax/</a></p>
+                <p><a href="https://www.daxformatter.com/">https://www.daxformatter.com/</a></p>
             
-            <p><strong>AVERAGEX():</strong></p>
-            <p>AVERAGEX(Tabla, Expresión)</p><br>
+                <br>
 
-            <p><strong>MAXX(): Evalúa una expresión en función de las filas de una tabla que le pasamos como primer parámetro. Va fila por fila evaluando la expresión y devuelve el valor máximo que resulte de esa expresión.</strong></p>
-            <p>MAXX(Tabla, Expresión)</p>
-            <p class="comentario">MAXX(Items, Items[Precio] - Items[Costo]) <br> 
-            // Primero hace la resta y luego busca entre todos cuál es el mayor.</p><br>
+                <p><strong>VAR - RETURN:</strong></p>
+                <p>YoY% = <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;VAR Sales = SUM(SalesTable[SalesAmount]) <br> 
 
-            <p><strong>MINX():</strong></p>
-            <p>MINX(Tabla, Expresión)</p><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;VAR SalesLastYear =
+                        CALCULATE ( SUM ( SalesTable[SalesAmount] ), <br> 
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SAMEPERIODLASTYEAR ( 'Calendar'[Date] ) )
+                        <br><br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;RETURN if(Sales, DIVIDE(Sales – SalesLastYear, Sales))
+                    </p> <br>
 
-            <p><strong>COUNTX(): Evalúa primero la expresión y devuelve el conteo basada en la expresión.</strong></p>
-            <p>COUNTX(Tabla, Expresión)</p>
-            <p class="comentario">COUNTX(Product,[ListPrice])</p><br>
+                <p><strong> CALCULATE():</strong></p>   
+                <p>Filtrar</p>  
+                <p><a href="https://www.youtube.com/watch?v=6lcZ5J-2NRQ">https://www.youtube.com/watch?v=6lcZ5J-2NRQ</a></p> 
+                <p>CALCULATE(Expresión, [Filtro 1], …)</p>
+                
 
-            <p><strong>RANKX():</strong></p>
-            <p>RANKX(Tabla, Expresión, [Valor], [Orden], [Ties])</p><br>
-
-<!--Falta-->
-            <p class="falta">
-                FALTAN 
-                PRODUCT()
-                FORMAT()
-                ITERATOR(“X”) FUNCTIONS
-            </p><br>
-<!--Falta-->
- 
-            <p><strong class="funcion">Funciones Lógicas:</strong></p><br>
-           
-            <p><strong>IF(): </strong></p>
-            <p>IF(Logica, True, False)</p><br>
-
-            <p><strong>IFERROR():</strong></p>
-            <p>IFERROR(Valor, Valor Si es Error)</p><br>
-
-            <p><strong>AND():</strong></p>
-            <p>AND(Lógica 1, Lógica 2)</p><br>
-
-            <p><strong>OR():</strong></p>
-            <p>OR(Lógica 1, Lógica 2)</p><br>
-
-            <p><strong>NOT():</strong></p>
-            <p>NOT(Lógica)</p><br>
-
-            <p><strong>SWITCH(): Evalúa una expresión frente a una lista de valores y devuelve una de varias expresiones de resultado posibles. La expresión del primer argumento puede ser cualquier expresion DAX que devuelva un valor escalar.</strong></p>
-            <p>SWITCH(expression, value, result [, value, result]…[, else])</p>
-            <p class="comentario">SWITCH([Month], 1, "January", 2, "February", 3, "March", 4, "April"  
-                , 5, "May", 6, "June", 7, "July", 8, "August"  
-                , 9, "September", 10, "October", 11, "November", 12, "December"  
-                , "Unknown month number" )</p><br>
-
-            <p><strong>TRUE() y FALSE():</strong></p>
-            <p class="comentario">IF(SUM('InternetSales_USD'[SalesAmount_USD]) >200000, <tag style="color:black">TRUE(), false())</tag></p><br>
-
-            <p><strong>	COALESCE(): Devuelve la primera expresión que no se evalúa como BLANK. Si todas las expresiones dan como resultado BLANK, se devuelve BLANK. Sirve para reemplazar las funciones IF + ISBLANK.</strong></p>
-            <p>COALESCE(expression, expression [, expression]…)</p><br>
-            
-            <p><strong class="funcion">Funciones Text:</strong></p><br>
-
-            <p><strong>CONCATENATE():</strong></p>
-            <p>CONCATENATE(Texto 1, Texto 2)</p><br>
-
-            <p><strong>FORMAT():</strong></p>
-            <p>FORMAT(value, format_string[, locale_name])</p>
-            <p class="comentario">
-                = FORMAT( 12345.67, "General Number")  <br>
-                = FORMAT( 12345.67, "Currency")  <br>
-                = FORMAT( 12345.67, "Fixed")  <br>
-                = FORMAT( 12345.67, "Standard")  <br>
-                = FORMAT( 12345.67, "Percent")  <br>
-                = FORMAT( 12345.67, "Scientific")
-            </p><br>
-            
-            <p><strong>LEFT():</strong></p>
-            <p>LEFT(Texto, número caracteres)</p><br>
-            
-            <p><strong>RIGHT():</strong></p>
-            <p>RIGHT(Texto, número caracteres)</p><br>
-
-            <p><strong>MID():</strong></p>
-            <p>MID(Texto, Número Inicial, Número de caracteres)</p>
-            <p class="comentario">MID("abcde",2,3))</p><br>
-
-            <p><strong>UPPER():</strong></p>
-            <p>UPPER(Texto)</p><br>
-
-            <p><strong>LOWER():</strong></p>
-            <p>LOWER(Texto)</p><br>
-
-            <p><strong>PROPER():</strong></p>
-            <p>PROPER(Texto)</p><br>
-
-            <p><strong>LEN():</strong></p>
-            <p>LEN(Texto)</p><br>
-
-            <p><strong>SEARCH():</strong></p>
-            <p>SEARCH(Texto que se quiera encontrar, Within Text, Posición Inicial, Si no se encuentra el valor)</p><br>
-
-<!--Falta-->
-<p class="falta">
-    FALTAN 
-    FIND()
-    REPLACE()
-    REPT()
-    TRIM()
-    UNICHAR()
-</p><br>
-<!--Falta-->
-
-            <p><strong>SUBSTITUTE():</strong></p>
-            <p>SUSTITUTE(Texto, Texto Viejo, Texto nuevo, Instance Number)</p><br>
-
-            <p><strong class="funcion">Funciones Filter:</strong></p><br>
-
-<!--Falta-->
-<p class="falta">
-    CALCULATE()
-    FILTER()
-    ALL()
-    ALLEXCEPT()
-    RELATED()
-    RELATEDTABLE()
-    DISTINCT()
-    VALUES()
-    EARLIER()
-    EARLIEST()
-    HANDSONEVALUE()
-    HANDSONFILTER()
-    ISFILTERED()
-    USERELATIONSHIP()    
-</p><br>
-<!--Falta-->
-
-            <p><strong class="funcion">Funciones Date & Time:</strong></p><br>
-<!--Falta-->       
-<p class="falta">
-    DATEIFF()
-    YEARFRAC()
-    YEAR()
-    MONTH()
-    DAY()
-    HOUR() 
-    MINUTE()
-    SECOND()
-    TODAY()
-    NOW()
-    WEEKDAY()
-    WEEKNUM()
-    DATESYTD()
-    DATESQTD()
-    DATESMTD()
-    DATEADD()
-    DATESINPERIOD()
-    Divide()    
-</p><br>   
-<!--Falta-->
-
-            <p><strong>Related() : related(nombre de columna)</strong></p>
-            <p>Devuelve valores relacionados en cada fila de una tabla en función de las relaciones con otras tablas</p><br>
-
-            <p><strong class="funcion">Funciones ROUNDING:</strong></p><br>
-
-            <p><strong>ROUND(): Redondea un número a un número específico de dígitos</strong></p>
-            <p>ROUND(Número, Número de dígitos)</p><br>
-            
-            
-<!--Falta-->       
-<p class="falta">
-    FLOOR()
-    TRUNC()
-    ROUNDDOWN()
-    MROUND()
-    CEILING()
-    ISO.CEILING()
-    ROUNDUP()
-    INT()
-    FIXED()   
-</p><br>   
-<!--Falta-->
-            <p><strong class="funcion">FUNCIONES DE INFORMACIÓN:</strong></p>
-
-            <p><strong>ISBLANK()</strong></p>
-            <p>Nombre = IF(ISBLANK([Columna]), "Está blanco", [Columna])</p><br>
-
-<p class="falta">
-    ISERROR()
-    ISLOGICAL()
-    ISNONTEXT()
-    ISNUMBER()
-    ISTEXT()    
-</p><br>   
-<!--Falta-->            
-            <p><strong class="funcion">FUNCION DE CONVERSION:</strong></p>
-
-            <p><strong>INT(): Redondea un número hacia abajo al entero más cercano.</strong></p>
-            <p>INT(Número)</p><br>
-
-<!--Falta-->
-<p>
-    CURRENCY()
-    FORMAT()
-    DATE()
-    TIME()
-    DATEVALUE()
-    VALUE()
-</p><br>   
-<!--Falta-->   
-
-            <img src="img/PowerBI/PowerBI_7.jpg" alt=""><br><br>
-
-            <p><strong class="funcion">Funciones modificadoras del contexto de filtro en el CALCULATE:</strong></p><br>
-
-            <p class="funcion">Tener en cuenta: Los filtros del CALCULATE solo aceptan booleanos y funciones de tabla. Internamente, CALCULATE convierte todos los filtros en tablas.</p><br>
-
-            <p><strong class="funcion">1-Para modificar filtros:</strong></p>
-            
-            <p><strong>REMOVEFILTERS(): Borrar filtros de las tablas o columnas especificadas. Funciona idéntico al ALL(), pero solo puede ser usado como modificador del CALCULATE.</strong></p>
-            <p>REMOVEFILTERS([table | column[, column[, column[,…]]]])</p><br>
-
-            <p><strong>KEEPFILTERS(): Modifica cómo se aplican los filtros al evaluar una función CALCULATE o CALCULATETABLE. No modifica los filtros existentes sino que suma un nuevo contexto de filtros. Cuando usa KEEPFILTERS, cualquier filtro existente en el contexto actual se compara con las columnas en los argumentos de filtro, y la intersección de esos argumentos se usa como contexto para evaluar la expresión. El efecto sobre cualquier columna es que se aplican ambos conjuntos de argumentos: tanto los argumentos de filtro usados en CALCULATE como los filtros en los argumentos de la función KEEPFILTER. En otras palabras, mientras que los filtros CALCULATE reemplazan el contexto actual, KEEPFILTERS agrega filtros al contexto actual.</strong></p>
-            <p>KEEPFILTERS(expression)</p><br>
-            
-            <p><strong>ALL(): Devuelve todas las filas de una tabla o todos los valores de una columna, ignorando cualquier filtro que se haya aplicado. Esta función no se usa sola, sino que sirve como una función intermedia que se puede usar para cambiar el conjunto de resultados sobre los que se realiza algún otro cálculo. ALL solo acepta como argumentos tablas físicas. Se usa cuando necesitamos ver valores sin filtrar y no queremos que el contexto de filtro actúe.</strong></p>
-            <p>ALL( [table o column[, column[, column[,…]]]] )</p><br>
-            
-            <p><strong>FILTER(): Devuelve una tabla que representa un subconjunto de otra tabla o expresión. Puede usar FILTER para reducir el número de filas en la tabla con la que está trabajando y usar solo datos específicos en los cálculos. FILTER no se usa de forma independiente, sino como una función que está incrustada en otras funciones que requieren una tabla como argumento.</strong></p>
-            <p>FILTER(table,filter)</p><br>
-            
-            <p><strong>DISTINCT(): Devuelve una tabla de una columna que contiene los distintos valores de la columna especificada. En otras palabras, los valores duplicados se eliminan y solo se devuelven valores únicos. Tener en cuenta: La función VALUES() es similar a DISTINCT(); también se puede utilizar para devolver una lista de valores únicos y, por lo general, devolverá exactamente los mismos resultados que DISTINCT. Sin embargo, en algún contexto, VALUES siempre muestra una fila en blanco por si hay valores “de más” en alguna de las tablas. </strong></p>
-            <p>DISTINCT(column)</p><br>
-
-            <p><strong>VALUES(): Cuando el parámetro de entrada es un nombre de columna, devuelve una tabla de una columna que contiene los distintos valores de la columna especificada. Los valores duplicados se eliminan y solo se devuelven valores únicos. Se agrega un valor EN BLANCO. Cuando el parámetro de entrada es un nombre de tabla, devuelve las filas de la tabla especificada. Las filas duplicadas se conservan. Se agrega una fila EN BLANCO. Esta función no se puede usar para devolver valores a una celda o columna en una hoja de trabajo; más bien, lo usa como una función intermedia, anidada en una fórmula, para obtener una lista de valores distintos que se pueden contar o usar para filtrar o sumar otros valores. Cuando usa la función en un contexto que ha sido filtrado, los valores únicos devueltos por VALUES se ven afectados por el filtro.</strong></p>
-            <p>VALUES(TableNameOrColumnName)</p><br>
-
-            <p><strong>SELECTVALUE(): Devuelve el valor cuando el contexto de columnName se ha filtrado a un solo valor distinto. De lo contrario, devuelve resultado alternativo.</strong></p>
-            <p>SELECTEDVALUE(columnName[, alternateResult])</p><br>
-
-            <p><strong>ALLEXCEPT(): Elimina todos los filtros de contexto de la tabla, excepto los que se han aplicado a las columnas especificadas. El primer argumento de la función ALLEXCEPT debe ser una referencia a una tabla base. Todos los argumentos posteriores deben ser referencias a columnas base. No puede usar expresiones de tabla o expresiones de columna con la función ALLEXCEPT. Esta función no se usa sola, sino que sirve como una función intermedia que se puede usar para cambiar el conjunto de resultados sobre los que se realiza algún otro cálculo. Conveniente para situaciones en las que desea eliminar los filtros en muchas columnas de una tabla, pero no en todas.</strong></p>
-            <p>ALLEXCEPT(table, column[,column[,…]])</p><br>
-
-            <p><strong>ALLSELECTED(): Elimina los filtros de contexto de las columnas y filas de la consulta actual, al tiempo que conserva todos los demás filtros de contexto o filtros explícitos. La función ALLSELECTED obtiene el contexto que representa todas las filas y columnas de la consulta, al tiempo que mantiene filtros y contextos explícitos distintos de los filtros de fila y columna. Esta función se puede utilizar para obtener totales visuales en las consultas. Si hay un argumento, el argumento es tableName o columnName . Si hay más de un argumento, deben ser columnas de la misma tabla. Esta función es diferente de ALL() porque conserva todos los filtros establecidos explícitamente dentro de la consulta y conserva todos los filtros de contexto que no sean los filtros de fila y columna.</strong></p>
-            <p>ALLSELECTED([tableName | columnName[, columnName[, columnName[,…]]]] )</p><br>
-            
-            <p><strong>SELECTCOLUMNS(): Retorna una tabla con el mismo número de filas que la tabla especificada como primer argumento. La tabla devuelta tiene una columna para cada par de argumentos name, scalar_expression, y cada expresión se evalúa en el contexto de una fila del argumento table especificado. SELECTCOLUMNS tiene la misma firma que ADDCOLUMNS y tiene el mismo comportamiento excepto que en lugar de comenzar con la tabla especificada, SELECTCOLUMNS comienza con una tabla vacía antes de agregar columnas.</strong></p>
-            <p>SELECTCOLUMNS(table, name, scalar_expression [, name, scalar_expression]…)</p><br>
-
-            <p><strong>ADDCOLUMNS(): Agrega columnas calculadas a la tabla o expresión de tabla dada.</strong></p>
-            <p>ADDCOLUMNS(table, name, expression[, name, expression]…)</p><br>
-
-            <p><strong>SUMMARIZE(): Devuelve una tabla de resumen de los totales solicitados en un conjunto de grupos. Cada columna para la que defina un nombre debe tener una expresión correspondiente; de lo contrario, se devuelve un error. El primer argumento, nombre, define el nombre de la columna en los resultados. El segundo argumento, expresión, define el cálculo realizado para obtener el valor de cada fila de esa columna.</strong></p>
-            <p>SUMMARIZE (table, groupBy_columnName[, groupBy_columnName]…[, name, expression]…)</p><br>
-
-           <!-- <p><strong></strong></p>
-            <p></p><br>
-
-            <p><strong></strong></p>
-            <p></p><br>
-
-            <p><strong></strong></p>
-            <p></p><br>
-
-            <p><strong></strong></p>
-            <p></p><br>
-
-            <p><strong></strong></p>
-            <p></p><br>-->
-        </article>
-
-        <br>
-
-        <!-- SQL -->
-        <article class="" id="SQL">
-            <h2 class="titulos">SQL</h2>
-            <br>
-             
-            <p class="funcion" style="padding-left:2%;">
-                <strong>Tipo de datos: <br></strong>
-                - Numeros y enteros: INT - TYNEINT - SMALLINT... <br>
-                - Números con decimales: FLOAT - DOUBLE - DECIMAL <br>
-                - Texto y Datos Binarios: VARCHAR - CHAR -
-                 TEXT - ENUM - BLOB <br>
-                - Fecha y hora: DATE - TIME - DATETIME - TIMESTAMP - YEAR <br>
+                <p class="comentario"> 
+                    CALCULATE([Ventas]) >> Trae lo mismo que la columna original.
+                    CALCULATE([Ventas], Producto[Marca] = “Conexión TI”) >> Filtra por marca.
                 </p><br>
 
-            <p><strong class="funcion">MySQL:</strong> Administrador de Bases de datos (BD). </p><br>
-            <p><strong>Mostrar Bases de datos: </strong>SHOW DATABASES; <i class="comentario">-- Para observar las bases de datos</i></p><br>
-            
-            <p><strong>Crear base de datos:</strong> CREATE DATABASE nombre</p><br>
-            <p><strong>Entrar a la base de datos: </strong></p>
-            <p>USE nombre_de_bd</p><br>
-            <p><strong>Crear tabla:</strong></p>
-            <p>CREATE TABLE nombre_de_tabla_a_crear(</p>
-            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;id INT (11) <i class="comentario">-- (11) de la cantidad de caracteres que soporta 4200 millones de registros</i><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; NOT NULL <i class="comentario"> -- NOT NULL que no puede tener valor nulo</i><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; AUTO_INCREMENT, <i class="comentario">-- Que sea autoincremental</i><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;nombre VARCHAR(60) NOT NULL, &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;precio DECIMAL(6,2) NOT NULL <i class="comentario">-- (6,2) por ejemplo &nbsp;&nbsp;&nbsp;100000,23</i><br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PRIMARY KEY(id) <br>);</p><br>
+                <p><strong class="funcion">Funciones Math & Stats:</strong></p><br>
 
-            <p><strong>Ver estructura de la tabla:</strong></p>
-            <p>DESCRIBE nombre_de_la_tabla</p><br>
+                <p><strong>SUM(): Suma todos los valores de una columna.</strong></p>
+                <p>SUM(Columna)</p><br>
 
-            <p><strong></strong></p>
-            <p></p><br>
+                <p><strong>AVERAGE(): Devuelve el promedio de todos los números de una columna</strong></p>
+                <p>AVERAGE(Columna)</p><br>
 
-            <!--Resaltar funciones resaltar verde-->
-        </article>
+                <p><strong>MAX(): Devuelve el valor más grande en una columna o entre dos expresiones escalares</strong></p>
+                <p>MAX(Columna) </p>
+                <p>MAX(Expresión 1, Expresión 2]) </p>
+                <p class="comentario">MAX(5*4, 5*5) </p><br>
 
-        <br>
+                <p><strong>MIN(): Devuelve el valor más pequeño en una columna o entre dos expresiones escalares. Mismo que MAX</strong></p>
+                <p>MIN(Columna)</p>
+                <p>MIN(Expresión 1, Expresión 2])</p><br>
 
-        <!-- GIT -->
-        <article class="" id="GIT">
-            <h2 class="titulos">GIT</h2>
-            <br>
-            <p>
-                <strong>GIT init: </strong> Se usa para iniciar un repositorio en una carpeta.
-                <br><br>
-                <strong>GIT add . : </strong> Se usa para confirmar que vamos a guardar todos los elementos de la carpeta en el repositorio.
-                <br><br>
-                <strong>GIT add . nombrearchivo: </strong> Esto es útil en caso de que quisiramos almacenar en el repositorio solo un archivo especifico.
-                <br><br>
-                <strong>GIT commit -m "Comentario o descripcion del commit a realizar": </strong> Se usa para confirmar el almacenamiento en el repositorio.
-                <br><br>
-                <strong>GIT log --oneline: </strong> Se usa para saber el historial de todos nuestros commits.
-                <br><br>
-                <strong>GIT status -s: </strong> Se  utiliza para saber el status de todos nuestros archivos en el repositorio, si no muestra nada es porque ya fueron guardados todos en el repositorio (Comiteados).
-                <br><br>
-                <strong>GIT reset --hard (Código de Commit): </strong> Se usa para volver a un commit en particular.
-                <br><br>
-                <strong>GIT branch:</strong> Se usa para conocer todas las ramas disponibles en el repositorio.
-                <br><br>
-                <strong>GIT branch (Nombre de la rama que deseamos crear):</strong> Se usa para crear nuevas ramas.
-                <br><br>
-                <strong>GIT checkout (Nombre de la rama a la que queremos pasar):</strong> Se usa para intercambiar de una rama a otra. 
-                <br><br>
-                <strong>GIT branch -d rama2 <- (nombre de la rama a borrar):</strong> Este comando se usa para borrar ramas.
-                <br><br>
-                <strong>GIT tag (Nombre del Tag) -m "Comentario":</strong> Se usa para crear un Tag. 
-                <br><br>
-                <strong>GIT push --tags:</strong> Se usa para confirmar el archivo final subido en Github, si accedemos a ese Tag podremos descargar un comprimido con todos los archivos.
-                <br><br>
+                <p><strong>DIVIDE(): Es mejor que utilizar el “/” porque si hay un error se puede poner un valor alternativo. </strong></p>
+                <p>DIVIDE(Numerador, Denominador, Resultado Alternativo)</p><br>
+
+                <p><strong>COUNT(): Cuenta todos los números de filas que hay en una columna que contiene números.</strong></p>
+                <p>COUNT(Columna)</p><br>
+
+                <p><strong>COUNTA(): Cuenta el número de valores en una columna. En blanco no los cuenta.</strong></p>
+                <p>COUNTA(Columna)</p><br>
+
+                <p><strong>COUNTROWS(): Cuenta el número de filas en la tabla de una columna específica o una tabla definida por una expresión. Cuenta los registros en blanco también.</strong></p>
+                <p>COUNTROWS(Tabla)</p><br>
+
+                <p><strong>COUNTBLANK(): Cuenta todas las filas que estan en blanco</strong></p>
+                <p>COUNTBLANK(Columna)</p><br>
+
+                <p><strong>DISTINCTCOUNT(): Cuenta el número de valores distintos o únicos en una columna</strong></p>
+                <p>DISTINCTCOUNT(Columna)</p>
+                <p class="comentario">No repite los resultados iguales</p><br>
+
+                <p><strong class="funcion">Funciones Iterativas X</strong></p><br>
+
+                <p><strong>SUMX(): Suma los resultados de las operaciones de cada fila de la tabla.</strong></p>
+                <p>SUMX(Tabla, Expresión)</p><br>
+                <p class="comentario">En vez de SUM(Columna1) * SUM(Columna2)</p>
+                <p class="comentario">SUMX(Tabla, Columna1  * Columna2)</p><br>
+                <p class="comentario">SUMX(</p>
+                <p class="comentario">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Tabla_Ventas,</p>
+                <p class="comentario">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Tabla_Ventas[PrecioUnidad] * Tabla_Ventas[Cantidad]</p>
+                <p class="comentario">)</p><br>
+
+                <img src="img/PowerBI/PowerBI_6.jpg" alt=""><br><br>
                 
-                <strong>PASOS PARA CLONAR UN REPO, MODIFICARLO Y LUEGO SUBIRLO DE NUEVO AL REPOSITORIO DE GITHUB</strong>
-                <br><br>
-                1) GIT clone (link del repo): Se usa para clonar un repo en GitHub en la maquina local y trabajar con esos archivos
-                <br><br>
-                2) Una vez realizado el paso anterior lo que procedemos a realiazr es abrir una nueva consola en el repositorio local
-                <br><br>
-                3) hacemos un GIT add .
-                <br><br>
-                4) un Commit
-                <br><br>
-                5) Finalmente usamos este comando<br><br>
-                   GIT push  (link del repo)<br><br>
-                <strong>PASOS PARA MERGEAR UN REPOSITORIO</strong><br><br>
-                1) Pasar a la Rama Master con GIT checkout<br><br>
-                2) Desde la Rama Master hacer un GIT merge (nombre de la rama a la queremos mergear con la original)
-            </p>
+                
+                <p><strong>AVERAGEX():</strong></p>
+                <p>AVERAGEX(Tabla, Expresión)</p><br>
 
+                <p><strong>MAXX(): Evalúa una expresión en función de las filas de una tabla que le pasamos como primer parámetro. Va fila por fila evaluando la expresión y devuelve el valor máximo que resulte de esa expresión.</strong></p>
+                <p>MAXX(Tabla, Expresión)</p>
+                <p class="comentario">MAXX(Items, Items[Precio] - Items[Costo]) <br> 
+                // Primero hace la resta y luego busca entre todos cuál es el mayor.</p><br>
+
+                <p><strong>MINX():</strong></p>
+                <p>MINX(Tabla, Expresión)</p><br>
+
+                <p><strong>COUNTX(): Evalúa primero la expresión y devuelve el conteo basada en la expresión.</strong></p>
+                <p>COUNTX(Tabla, Expresión)</p>
+                <p class="comentario">COUNTX(Product,[ListPrice])</p><br>
+
+                <p><strong>RANKX():</strong></p>
+                <p>RANKX(Tabla, Expresión, [Valor], [Orden], [Ties])</p><br>
+
+    <!--Falta-->
+                <p class="falta">
+                    FALTAN 
+                    PRODUCT()
+                    FORMAT()
+                    ITERATOR(“X”) FUNCTIONS
+                </p><br>
+    <!--Falta-->
+    
+                <p><strong class="funcion">Funciones Lógicas:</strong></p><br>
             
-        </article>
+                <p><strong>IF(): </strong></p>
+                <p>IF(Logica, True, False)</p><br>
+
+                <p><strong>IFERROR():</strong></p>
+                <p>IFERROR(Valor, Valor Si es Error)</p><br>
+
+                <p><strong>AND():</strong></p>
+                <p>AND(Lógica 1, Lógica 2)</p><br>
+
+                <p><strong>OR():</strong></p>
+                <p>OR(Lógica 1, Lógica 2)</p><br>
+
+                <p><strong>NOT():</strong></p>
+                <p>NOT(Lógica)</p><br>
+
+                <p><strong>SWITCH(): Evalúa una expresión frente a una lista de valores y devuelve una de varias expresiones de resultado posibles. La expresión del primer argumento puede ser cualquier expresion DAX que devuelva un valor escalar.</strong></p>
+                <p>SWITCH(expression, value, result [, value, result]…[, else])</p>
+                <p class="comentario">SWITCH([Month], 1, "January", 2, "February", 3, "March", 4, "April"  
+                    , 5, "May", 6, "June", 7, "July", 8, "August"  
+                    , 9, "September", 10, "October", 11, "November", 12, "December"  
+                    , "Unknown month number" )</p><br>
+
+                <p><strong>TRUE() y FALSE():</strong></p>
+                <p class="comentario">IF(SUM('InternetSales_USD'[SalesAmount_USD]) >200000, <tag style="color:black">TRUE(), false())</tag></p><br>
+
+                <p><strong>	COALESCE(): Devuelve la primera expresión que no se evalúa como BLANK. Si todas las expresiones dan como resultado BLANK, se devuelve BLANK. Sirve para reemplazar las funciones IF + ISBLANK.</strong></p>
+                <p>COALESCE(expression, expression [, expression]…)</p><br>
+                
+                <p><strong class="funcion">Funciones Text:</strong></p><br>
+
+                <p><strong>CONCATENATE():</strong></p>
+                <p>CONCATENATE(Texto 1, Texto 2)</p><br>
+
+                <p><strong>FORMAT():</strong></p>
+                <p>FORMAT(value, format_string[, locale_name])</p>
+                <p class="comentario">
+                    = FORMAT( 12345.67, "General Number")  <br>
+                    = FORMAT( 12345.67, "Currency")  <br>
+                    = FORMAT( 12345.67, "Fixed")  <br>
+                    = FORMAT( 12345.67, "Standard")  <br>
+                    = FORMAT( 12345.67, "Percent")  <br>
+                    = FORMAT( 12345.67, "Scientific")
+                </p><br>
+                
+                <p><strong>LEFT():</strong></p>
+                <p>LEFT(Texto, número caracteres)</p><br>
+                
+                <p><strong>RIGHT():</strong></p>
+                <p>RIGHT(Texto, número caracteres)</p><br>
+
+                <p><strong>MID():</strong></p>
+                <p>MID(Texto, Número Inicial, Número de caracteres)</p>
+                <p class="comentario">MID("abcde",2,3))</p><br>
+
+                <p><strong>UPPER():</strong></p>
+                <p>UPPER(Texto)</p><br>
+
+                <p><strong>LOWER():</strong></p>
+                <p>LOWER(Texto)</p><br>
+
+                <p><strong>PROPER():</strong></p>
+                <p>PROPER(Texto)</p><br>
+
+                <p><strong>LEN():</strong></p>
+                <p>LEN(Texto)</p><br>
+
+                <p><strong>SEARCH():</strong></p>
+                <p>SEARCH(Texto que se quiera encontrar, Within Text, Posición Inicial, Si no se encuentra el valor)</p><br>
+
+    <!--Falta-->
+    <p class="falta">
+        FALTAN 
+        FIND()
+        REPLACE()
+        REPT()
+        TRIM()
+        UNICHAR()
+    </p><br>
+    <!--Falta-->
+
+                <p><strong>SUBSTITUTE():</strong></p>
+                <p>SUSTITUTE(Texto, Texto Viejo, Texto nuevo, Instance Number)</p><br>
+
+                <p><strong class="funcion">Funciones Filter:</strong></p><br>
+
+    <!--Falta-->
+    <p class="falta">
+        CALCULATE()
+        FILTER()
+        ALL()
+        ALLEXCEPT()
+        RELATED()
+        RELATEDTABLE()
+        DISTINCT()
+        VALUES()
+        EARLIER()
+        EARLIEST()
+        HANDSONEVALUE()
+        HANDSONFILTER()
+        ISFILTERED()
+        USERELATIONSHIP()    
+    </p><br>
+    <!--Falta-->
+
+                <p><strong class="funcion">Funciones Date & Time:</strong></p><br>
+    <!--Falta-->       
+    <p class="falta">
+        DATEIFF()
+        YEARFRAC()
+        YEAR()
+        MONTH()
+        DAY()
+        HOUR() 
+        MINUTE()
+        SECOND()
+        TODAY()
+        NOW()
+        WEEKDAY()
+        WEEKNUM()
+        DATESYTD()
+        DATESQTD()
+        DATESMTD()
+        DATEADD()
+        DATESINPERIOD()
+        Divide()    
+    </p><br>   
+    <!--Falta-->
+
+                <p><strong>Related() : related(nombre de columna)</strong></p>
+                <p>Devuelve valores relacionados en cada fila de una tabla en función de las relaciones con otras tablas</p><br>
+
+                <p><strong class="funcion">Funciones ROUNDING:</strong></p><br>
+
+                <p><strong>ROUND(): Redondea un número a un número específico de dígitos</strong></p>
+                <p>ROUND(Número, Número de dígitos)</p><br>
+                
+                
+    <!--Falta-->       
+    <p class="falta">
+        FLOOR()
+        TRUNC()
+        ROUNDDOWN()
+        MROUND()
+        CEILING()
+        ISO.CEILING()
+        ROUNDUP()
+        INT()
+        FIXED()   
+    </p><br>   
+    <!--Falta-->
+                <p><strong class="funcion">FUNCIONES DE INFORMACIÓN:</strong></p>
+
+                <p><strong>ISBLANK()</strong></p>
+                <p>Nombre = IF(ISBLANK([Columna]), "Está blanco", [Columna])</p><br>
+
+    <p class="falta">
+        ISERROR()
+        ISLOGICAL()
+        ISNONTEXT()
+        ISNUMBER()
+        ISTEXT()    
+    </p><br>   
+    <!--Falta-->            
+                <p><strong class="funcion">FUNCION DE CONVERSION:</strong></p>
+
+                <p><strong>INT(): Redondea un número hacia abajo al entero más cercano.</strong></p>
+                <p>INT(Número)</p><br>
+
+    <!--Falta-->
+    <p>
+        CURRENCY()
+        FORMAT()
+        DATE()
+        TIME()
+        DATEVALUE()
+        VALUE()
+    </p><br>   
+    <!--Falta-->   
+
+                <img src="img/PowerBI/PowerBI_7.jpg" alt=""><br><br>
+
+                <p><strong class="funcion">Funciones modificadoras del contexto de filtro en el CALCULATE:</strong></p><br>
+
+                <p class="funcion">Tener en cuenta: Los filtros del CALCULATE solo aceptan booleanos y funciones de tabla. Internamente, CALCULATE convierte todos los filtros en tablas.</p><br>
+
+                <p><strong class="funcion">1-Para modificar filtros:</strong></p>
+                
+                <p><strong>REMOVEFILTERS(): Borrar filtros de las tablas o columnas especificadas. Funciona idéntico al ALL(), pero solo puede ser usado como modificador del CALCULATE.</strong></p>
+                <p>REMOVEFILTERS([table | column[, column[, column[,…]]]])</p><br>
+
+                <p><strong>KEEPFILTERS(): Modifica cómo se aplican los filtros al evaluar una función CALCULATE o CALCULATETABLE. No modifica los filtros existentes sino que suma un nuevo contexto de filtros. Cuando usa KEEPFILTERS, cualquier filtro existente en el contexto actual se compara con las columnas en los argumentos de filtro, y la intersección de esos argumentos se usa como contexto para evaluar la expresión. El efecto sobre cualquier columna es que se aplican ambos conjuntos de argumentos: tanto los argumentos de filtro usados en CALCULATE como los filtros en los argumentos de la función KEEPFILTER. En otras palabras, mientras que los filtros CALCULATE reemplazan el contexto actual, KEEPFILTERS agrega filtros al contexto actual.</strong></p>
+                <p>KEEPFILTERS(expression)</p><br>
+                
+                <p><strong>ALL(): Devuelve todas las filas de una tabla o todos los valores de una columna, ignorando cualquier filtro que se haya aplicado. Esta función no se usa sola, sino que sirve como una función intermedia que se puede usar para cambiar el conjunto de resultados sobre los que se realiza algún otro cálculo. ALL solo acepta como argumentos tablas físicas. Se usa cuando necesitamos ver valores sin filtrar y no queremos que el contexto de filtro actúe.</strong></p>
+                <p>ALL( [table o column[, column[, column[,…]]]] )</p><br>
+                
+                <p><strong>FILTER(): Devuelve una tabla que representa un subconjunto de otra tabla o expresión. Puede usar FILTER para reducir el número de filas en la tabla con la que está trabajando y usar solo datos específicos en los cálculos. FILTER no se usa de forma independiente, sino como una función que está incrustada en otras funciones que requieren una tabla como argumento.</strong></p>
+                <p>FILTER(table,filter)</p><br>
+                
+                <p><strong>DISTINCT(): Devuelve una tabla de una columna que contiene los distintos valores de la columna especificada. En otras palabras, los valores duplicados se eliminan y solo se devuelven valores únicos. Tener en cuenta: La función VALUES() es similar a DISTINCT(); también se puede utilizar para devolver una lista de valores únicos y, por lo general, devolverá exactamente los mismos resultados que DISTINCT. Sin embargo, en algún contexto, VALUES siempre muestra una fila en blanco por si hay valores “de más” en alguna de las tablas. </strong></p>
+                <p>DISTINCT(column)</p><br>
+
+                <p><strong>VALUES(): Cuando el parámetro de entrada es un nombre de columna, devuelve una tabla de una columna que contiene los distintos valores de la columna especificada. Los valores duplicados se eliminan y solo se devuelven valores únicos. Se agrega un valor EN BLANCO. Cuando el parámetro de entrada es un nombre de tabla, devuelve las filas de la tabla especificada. Las filas duplicadas se conservan. Se agrega una fila EN BLANCO. Esta función no se puede usar para devolver valores a una celda o columna en una hoja de trabajo; más bien, lo usa como una función intermedia, anidada en una fórmula, para obtener una lista de valores distintos que se pueden contar o usar para filtrar o sumar otros valores. Cuando usa la función en un contexto que ha sido filtrado, los valores únicos devueltos por VALUES se ven afectados por el filtro.</strong></p>
+                <p>VALUES(TableNameOrColumnName)</p><br>
+
+                <p><strong>SELECTVALUE(): Devuelve el valor cuando el contexto de columnName se ha filtrado a un solo valor distinto. De lo contrario, devuelve resultado alternativo.</strong></p>
+                <p>SELECTEDVALUE(columnName[, alternateResult])</p><br>
+
+                <p><strong>ALLEXCEPT(): Elimina todos los filtros de contexto de la tabla, excepto los que se han aplicado a las columnas especificadas. El primer argumento de la función ALLEXCEPT debe ser una referencia a una tabla base. Todos los argumentos posteriores deben ser referencias a columnas base. No puede usar expresiones de tabla o expresiones de columna con la función ALLEXCEPT. Esta función no se usa sola, sino que sirve como una función intermedia que se puede usar para cambiar el conjunto de resultados sobre los que se realiza algún otro cálculo. Conveniente para situaciones en las que desea eliminar los filtros en muchas columnas de una tabla, pero no en todas.</strong></p>
+                <p>ALLEXCEPT(table, column[,column[,…]])</p><br>
+
+                <p><strong>ALLSELECTED(): Elimina los filtros de contexto de las columnas y filas de la consulta actual, al tiempo que conserva todos los demás filtros de contexto o filtros explícitos. La función ALLSELECTED obtiene el contexto que representa todas las filas y columnas de la consulta, al tiempo que mantiene filtros y contextos explícitos distintos de los filtros de fila y columna. Esta función se puede utilizar para obtener totales visuales en las consultas. Si hay un argumento, el argumento es tableName o columnName . Si hay más de un argumento, deben ser columnas de la misma tabla. Esta función es diferente de ALL() porque conserva todos los filtros establecidos explícitamente dentro de la consulta y conserva todos los filtros de contexto que no sean los filtros de fila y columna.</strong></p>
+                <p>ALLSELECTED([tableName | columnName[, columnName[, columnName[,…]]]] )</p><br>
+                
+                <p><strong>SELECTCOLUMNS(): Retorna una tabla con el mismo número de filas que la tabla especificada como primer argumento. La tabla devuelta tiene una columna para cada par de argumentos name, scalar_expression, y cada expresión se evalúa en el contexto de una fila del argumento table especificado. SELECTCOLUMNS tiene la misma firma que ADDCOLUMNS y tiene el mismo comportamiento excepto que en lugar de comenzar con la tabla especificada, SELECTCOLUMNS comienza con una tabla vacía antes de agregar columnas.</strong></p>
+                <p>SELECTCOLUMNS(table, name, scalar_expression [, name, scalar_expression]…)</p><br>
+
+                <p><strong>ADDCOLUMNS(): Agrega columnas calculadas a la tabla o expresión de tabla dada.</strong></p>
+                <p>ADDCOLUMNS(table, name, expression[, name, expression]…)</p><br>
+
+                <p><strong>SUMMARIZE(): Devuelve una tabla de resumen de los totales solicitados en un conjunto de grupos. Cada columna para la que defina un nombre debe tener una expresión correspondiente; de lo contrario, se devuelve un error. El primer argumento, nombre, define el nombre de la columna en los resultados. El segundo argumento, expresión, define el cálculo realizado para obtener el valor de cada fila de esa columna.</strong></p>
+                <p>SUMMARIZE (table, groupBy_columnName[, groupBy_columnName]…[, name, expression]…)</p><br>
+
+            <!-- <p><strong></strong></p>
+                <p></p><br>
+
+                <p><strong></strong></p>
+                <p></p><br>
+
+                <p><strong></strong></p>
+                <p></p><br>
+
+                <p><strong></strong></p>
+                <p></p><br>
+
+                <p><strong></strong></p>
+                <p></p><br>-->
+            </article>
+
+            <br>
+
+            <!-- SQL -->
+            <article class="" id="SQL_content">
+                <h2 class="titulos">SQL</h2>
+                <br>
+                
+                <p class="funcion" style="padding-left:2%;">
+                    <strong>Tipo de datos: <br></strong>
+                    - Numeros y enteros: INT - TYNEINT - SMALLINT... <br>
+                    - Números con decimales: FLOAT - DOUBLE - DECIMAL <br>
+                    - Texto y Datos Binarios: VARCHAR - CHAR -
+                    TEXT - ENUM - BLOB <br>
+                    - Fecha y hora: DATE - TIME - DATETIME - TIMESTAMP - YEAR <br>
+                    </p><br>
+
+                <p><strong class="funcion">MySQL:</strong> Administrador de Bases de datos (BD). </p><br>
+                <p><strong>Mostrar Bases de datos: </strong>SHOW DATABASES; <i class="comentario">-- Para observar las bases de datos</i></p><br>
+                
+                <p><strong>Crear base de datos:</strong> CREATE DATABASE nombre</p><br>
+                
+                <p><strong>Crear tabla:</strong></p>
+                <p>CREATE TABLE nombre_de_tabla_a_crear(</p>
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;id INT (11) <i class="comentario">-- (11) de la cantidad de caracteres que soporta 4200 millones de registros</i><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; NOT NULL <i class="comentario"> -- NOT NULL que no puede tener valor nulo</i><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; AUTO_INCREMENT, <i class="comentario">-- Que sea autoincremental</i><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;nombre VARCHAR(60) NOT NULL, &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;precio DECIMAL(6,2) NOT NULL <i class="comentario">-- (6,2) por ejemplo &nbsp;&nbsp;&nbsp;100000,23</i><br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PRIMARY KEY(id) <br>);</p><br>
+
+                <p><strong>Ver estructura de la tabla:</strong></p>
+                <p>DESCRIBE nombre_de_la_tabla</p><br>
+                
+                <!--SQL Server-->
+                <p><strong class="funcion">SQL Server Management Studio:</strong></p><br>
+                
+                <p><strong>New Query: </strong>Hoja pata realizar consultas.</p>
+                <p></p><br>
+
+                <p><strong>Utilizar la base de datos: </strong></p>
+                <p>USE nombre_de_bd</p><br>
+
+                <p><strong class="funcion">Intrucciones T-SQL:</strong></p>
+            
+                <p><strong>Data Manipulation Language (DML)</strong></p>
+                <p>Declaraciones para consultar y modificar datos:</p>
+                <p>SELECT - INSERT - UPDATE - DELETE</p><br>
+
+                <p><strong>Data Definition Language (DDL)</strong></p>
+                <p>Declaraciones para definiciones de objetos</p>
+                <p>CREATE - ALTER - DROP</p><br>
+
+                <p><strong>Data Control Language (DCL)</strong></p>
+                <p>Declaraciones de permisos de seguridad</p>
+                <p>GRANT - REVOKE - DENY</p><br>
+
+                <p><strong>SELECT:</strong> Pedir datos y que te devuelva.</p>
+                <p>SELECT 'Hola Mundo'</p>
+                <p>SELECT getdate()</p>
+                <p>SELECT * FROM Customers</p><br>
+
+                <p><strong></strong></p>
+                <p></p><br>
+
+                <!--Resaltar funciones resaltar verde-->
+            </article>
+
+            <br>
+
+            <!-- GIT -->
+            <article class="" id="GIT_content">
+                <h2 class="titulos">GIT</h2>
+                <br>
+                <p>
+                    <strong>GIT init: </strong> Se usa para iniciar un repositorio en una carpeta.
+                    <br><br>
+                    <strong>GIT add . : </strong> Se usa para confirmar que vamos a guardar todos los elementos de la carpeta en el repositorio.
+                    <br><br>
+                    <strong>GIT add . nombrearchivo: </strong> Esto es útil en caso de que quisiramos almacenar en el repositorio solo un archivo especifico.
+                    <br><br>
+                    <strong>GIT commit -m "Comentario o descripcion del commit a realizar": </strong> Se usa para confirmar el almacenamiento en el repositorio.
+                    <br><br>
+                    <strong>GIT log --oneline: </strong> Se usa para saber el historial de todos nuestros commits.
+                    <br><br>
+                    <strong>GIT status -s: </strong> Se  utiliza para saber el status de todos nuestros archivos en el repositorio, si no muestra nada es porque ya fueron guardados todos en el repositorio (Comiteados).
+                    <br><br>
+                    <strong>GIT reset --hard (Código de Commit): </strong> Se usa para volver a un commit en particular.
+                    <br><br>
+                    <strong>GIT branch:</strong> Se usa para conocer todas las ramas disponibles en el repositorio.
+                    <br><br>
+                    <strong>GIT branch (Nombre de la rama que deseamos crear):</strong> Se usa para crear nuevas ramas.
+                    <br><br>
+                    <strong>GIT checkout (Nombre de la rama a la que queremos pasar):</strong> Se usa para intercambiar de una rama a otra. 
+                    <br><br>
+                    <strong>GIT branch -d rama2 <- (nombre de la rama a borrar):</strong> Este comando se usa para borrar ramas.
+                    <br><br>
+                    <strong>GIT tag (Nombre del Tag) -m "Comentario":</strong> Se usa para crear un Tag. 
+                    <br><br>
+                    <strong>GIT push --tags:</strong> Se usa para confirmar el archivo final subido en Github, si accedemos a ese Tag podremos descargar un comprimido con todos los archivos.
+                    <br><br>
+                    
+                    <strong>PASOS PARA CLONAR UN REPO, MODIFICARLO Y LUEGO SUBIRLO DE NUEVO AL REPOSITORIO DE GITHUB</strong>
+                    <br><br>
+                    1) GIT clone (link del repo): Se usa para clonar un repo en GitHub en la maquina local y trabajar con esos archivos
+                    <br><br>
+                    2) Una vez realizado el paso anterior lo que procedemos a realiazr es abrir una nueva consola en el repositorio local
+                    <br><br>
+                    3) hacemos un GIT add .
+                    <br><br>
+                    4) un Commit
+                    <br><br>
+                    5) Finalmente usamos este comando<br><br>
+                    GIT push  (link del repo)<br><br>
+                    <strong>PASOS PARA MERGEAR UN REPOSITORIO</strong><br><br>
+                    1) Pasar a la Rama Master con GIT checkout<br><br>
+                    2) Desde la Rama Master hacer un GIT merge (nombre de la rama a la queremos mergear con la original)
+                </p>
+
+                <br><br>
+            </article>
+        </div>
 
     </section>
 
     <footer>
         <a href="#" class="titulos arrow">↑</a>
     </footer>
+
+
+
+    <script src="https://unpkg.com/web-animations-js@2.3.2/web-animations.min.js"></script>
+	<script src="https://unpkg.com/muuri@0.8.0/dist/muuri.min.js"></script>
+
 <script src="script.js"></script>
 </body>
 </html>
