@@ -171,4 +171,7 @@ a{
     }    
 }
 
-
+.tabla, .tabla th, .tabla td{
+    border: black solid 1.3px;
+    padding: 2px;
+}
